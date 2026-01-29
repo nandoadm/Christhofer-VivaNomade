@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Nômade - Transforme Sua Vida em uma Jornada de Liberdade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/script/script.js" defer></script>
+</head>
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">VIDA NÔMADE</div>
+            <button class="cta-header" onclick="scrollToPrice()">COMEÇAR AGORA</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Transforme sua vida em uma <span class="highlight">jornada de liberdade</span>
+            </h1>
+            <p>
+                Descubra o método comprovado que já transformou centenas de vidas, ensinando como trabalhar 
+                de qualquer lugar do mundo e conquistar a liberdade que você sempre sonhou.
+            </p>
+            <div class="hero-cta">
+                <button class="cta-primary" onclick="scrollToPrice()">QUERO SER LIVRE AGORA</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Urgência Banner -->
+    <div class="urgency-banner">
+        <span class="emoji">⚡</span>
+        ÚLTIMAS VAGAS COM 60% DE DESCONTO - OFERTA EXPIRA EM:
+        <span class="emoji">⚡</span>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">12</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-content">
+            <h2 class="section-title animate-fade">
+                Assista e descubra como <span class="highlight">tudo funciona</span>
+            </h2>
+            <p class="section-subtitle animate-fade">
+                Veja como milhares de pessoas estão transformando suas vidas e conquistando a liberdade de viver viajando pelo mundo
+            </p>
+            <div class="video-wrapper animate-fade">
+                <iframe src="https://www.youtube.com/embed/fv0zdj9LW0o?si=YOMrsJD4zHz3MiRG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema/Solução -->
+    <section class="problem-solution">
+        <div class="problem-solution-content">
+            <div class="problem-intro">
+                <h2>Você está preso nesta rotina?</h2>
+                <p>A maioria das pessoas vive limitada por crenças que impedem de alcançar a verdadeira liberdade</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-item animate-fade">
+                    <h3>Trabalho Frustrante</h3>
+                    <p>Acordar todo dia para um trabalho que não te inspira, vivendo para trabalhar ao invés de trabalhar para viver.</p>
+                </div>
+                <div class="problem-item animate-fade">
+                    <h3>Medo Financeiro</h3>
+                    <p>O medo de não ter dinheiro te impede de viver seus sonhos e explorar o mundo que tanto deseja conhecer.</p>
+                </div>
+                <div class="problem-item animate-fade">
+                    <h3>Falta de Tempo</h3>
+                    <p>Suas férias de 15 dias por ano nunca são suficientes para realizar todos os sonhos que você tem.</p>
+                </div>
+                <div class="problem-item animate-fade">
+                    <h3>Preso em um Lugar</h3>
+                    <p>Sente que está desperdiçando sua vida limitado a uma única cidade, sem experimentar novas culturas.</p>
+                </div>
+                <div class="problem-item animate-fade">
+                    <h3>Sem Saber Por Onde Começar</h3>
+                    <p>Sonha em viver viajando mas não tem a menor ideia de como transformar esse sonho em realidade.</p>
+                </div>
+                <div class="problem-item animate-fade">
+                    <h3>Vida Sem Sentido</h3>
+                    <p>Sente que está vivendo no automático, sem propósito real, apenas cumprindo obrigações dia após dia.</p>
+                </div>
+            </div>
+
+            <div class="solution-cta animate-fade">
+                <h3>E se eu te dissesse que existe uma forma comprovada de mudar isso?</h3>
+                <p>Você pode conquistar a liberdade que sempre sonhou. Milhares já fizeram. Agora é a sua vez.</p>
+                <button class="cta-primary" onclick="scrollToPrice()">QUERO MUDAR MINHA VIDA AGORA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits with Image -->
+    <section class="benefits-visual">
+        <div class="benefits-visual-content">
+            <div class="benefits-image animate-fade">
+                <img src="assets/img/image.png" alt="Vida Nômade - Liberdade">
+            </div>
+            <div class="benefits-text animate-fade">
+                <h2>
+                    O que você vai <span class="highlight">conquistar</span>
+                </h2>
+                <ul class="benefits-list">
+                    <li>Liberdade geográfica total para trabalhar de qualquer lugar do mundo</li>
+                    <li>Múltiplas fontes de renda online garantindo estabilidade financeira</li>
+                    <li>Controle absoluto do seu tempo e das suas prioridades</li>
+                    <li>Transformação pessoal e mentalidade vencedora</li>
+                    <li>Planejamento estratégico para viajar de forma inteligente</li>
+                    <li>Comunidade exclusiva de nômades digitais</li>
+                    <li>Acesso a técnicas e estratégias comprovadas</li>
+                    <li>Suporte completo na sua jornada de transformação</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-visual">
+        <div class="testimonials-content">
+            <h2 class="section-title">
+                O que nossos <span class="highlight">alunos</span> dizem
+            </h2>
+            <p class="section-subtitle">
+                Histórias reais de pessoas que transformaram suas vidas
+            </p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial animate-fade">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RC</div>
+                        <div class="testimonial-info">
+                            <h4>Rafael Costa</h4>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Há 3 anos eu estava preso em um escritório odiando minha vida. Hoje trabalho de praias paradisíacas 
+                        e já conheci 12 países. Este curso mudou minha vida completamente!"
+                    </p>
+                </div>
+
+                <div class="testimonial animate-fade">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MS</div>
+                        <div class="testimonial-info">
+                            <h4>Marina Silva</h4>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Achei que nunca conseguiria largar meu emprego CLT. O curso me deu todo suporte prático e emocional 
+                        para fazer a transição. Hoje ganho em dólar trabalhando de qualquer lugar!"
+                    </p>
+                </div>
+
+                <div class="testimonial animate-fade">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">LP</div>
+                        <div class="testimonial-info">
+                            <h4>Lucas Pereira</h4>
+                            <div class="testimonial-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "O módulo de renda online foi fundamental. Aprendi a criar múltiplas fontes de renda e hoje tenho 
+                        a liberdade financeira que sempre sonhei. Melhor investimento da minha vida!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-content">
+            <h2 class="section-title animate-fade">
+                Transforme sua vida <span class="highlight">hoje</span>
+            </h2>
+            <p class="section-subtitle animate-fade">
+                Investimento que vai mudar sua vida para sempre
+            </p>
+
+            <div class="pricing-card animate-fade">
+                <div class="pricing-header">
+                    <p>De <span class="old-price">R$ 1.497</span></p>
+                    <p style="font-size: 1.5rem; margin: 1rem 0;">Por apenas</p>
+                    <div class="current-price">R$ 597</div>
+                    <p class="price-installments">ou 12x de R$ 59,23 sem juros</p>
+                </div>
+
+                <ul class="price-features">
+                    <li>Acesso vitalício a todas as aulas</li>
+                    <li>Mais de 50 aulas práticas e aprofundadas</li>
+                    <li>4 módulos completos de transformação</li>
+                    <li>Comunidade exclusiva de alunos</li>
+                    <li>Todas as atualizações futuras incluídas</li>
+                    <li>Bônus exclusivos</li>
+                    <li>Garantia incondicional de 7 dias</li>
+                    <li>Certificado de conclusão</li>
+                    <li>Suporte direto com instrutores</li>
+                </ul>
+
+                <button class="cta-final" onclick="checkout()">
+                    GARANTIR MINHA VAGA COM 60% OFF
+                </button>
+
+                <div class="guarantee-badge">
+                    <div style="font-size: 3rem;">🛡️</div>
+                    <p><strong>Garantia Incondicional de 7 Dias</strong></p>
+                    <p>Satisfação garantida ou seu dinheiro de volta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">VIDA NÔMADE</div>
+            <p style="margin: 2rem 0; font-size: 1.1rem; opacity: 0.8;">
+                Transforme sua vida em uma jornada de liberdade e aventura
+            </p>
+            <p style="opacity: 0.5; margin-top: 3rem;">
+                © 2026 Vida Nômade. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

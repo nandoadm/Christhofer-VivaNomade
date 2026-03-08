@@ -171,10 +171,11 @@
     ============================================= */
         .vn-container {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1920px;
             margin-inline: auto;
             padding-inline: clamp(18px, 5vw, 60px);
         }
+
 
         .vn-section {
             padding-block: clamp(64px, 9vw, 120px);
@@ -489,7 +490,7 @@
 
         .vn-h1 {
             font-family: var(--vn-ff-head);
-            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            font-size: clamp(1.0rem, 5.5vw, 2.8rem);
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.03em;
@@ -937,7 +938,6 @@
             }
         }
 
-        .vn-objection-side {}
 
         .vn-objection-label {
             font-family: var(--vn-ff-head);
@@ -1113,73 +1113,267 @@
         /* =============================================
        SEÇÃO 5: PRODUTO
     ============================================= */
-        .vn-product {}
 
-        .vn-tracks-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
+        /* Carrossel de Trilhas */
+        .vn-passport {
+            margin: 52px 0 64px;
+            position: relative;
         }
 
-        @media (max-width: 640px) {
-            .vn-tracks-grid {
-                grid-template-columns: 1fr;
+        .vn-passport__title {
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--vn-text-muted);
+            font-style: italic;
+            margin-bottom: 28px;
+        }
+
+        .vn-passport__track-wrap {
+            overflow: hidden;
+            border-radius: var(--vn-radius-lg);
+            position: relative;
+        }
+
+        .vn-passport__track {
+            display: flex;
+            transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+            will-change: transform;
+        }
+
+        .vn-ticket {
+            flex: 0 0 100%;
+            background: linear-gradient(135deg, #0D3348 0%, #1A5978 100%);
+            border-radius: var(--vn-radius-lg);
+            padding: 24px;
+            color: var(--vn-text-invert, white);
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 860px) {
+            .vn-ticket {
+                flex: 0 0 calc(50% - 12px);
+                margin-right: 24px;
             }
         }
 
-        .vn-track-card {
-            background: var(--vn-bg-card);
-            border: 1px solid var(--vn-border-card);
-            border-radius: var(--vn-radius-lg);
-            padding: 28px 24px;
-            transition: border-color var(--vn-transition), transform var(--vn-transition), box-shadow var(--vn-transition);
+        .vn-ticket::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--vn-amber), var(--vn-green));
         }
 
-        .vn-track-card:hover {
-            border-color: rgba(46, 232, 122, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        .vn-ticket::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 18px solid rgba(255, 255, 255, .04);
         }
 
-        .vn-track-icon {
-            font-size: 2rem;
-            margin-bottom: 14px;
+        .vn-ticket__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .vn-ticket__trilha-num {
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--vn-amber);
+            background: rgba(245, 200, 66, .12);
+            border: 1px solid rgba(245, 200, 66, .2);
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        .vn-ticket__stamp {
+            font-size: 1.8rem;
+            opacity: .7;
+        }
+
+        .vn-ticket__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .vn-ticket__learns {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .vn-ticket__learn {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.5;
+        }
+
+        .vn-ticket__learn::before {
+            content: '→';
+            color: var(--vn-green);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .vn-ticket__result {
+            background: rgba(46, 232, 122, .12);
+            border: 1px solid rgba(46, 232, 122, .2);
+            border-radius: var(--vn-radius-sm);
+            padding: 12px 16px;
+            font-size: .82rem;
+            color: var(--vn-green);
+            font-weight: 600;
+        }
+
+        .vn-ticket__result::before {
+            content: '✓ ';
+        }
+
+        /* Módulos e Aulas */
+        .vn-ticket__modules {
+            flex: 1;
+            margin-bottom: 12px;
+        }
+
+        .vn-ticket__module {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .vn-ticket__module:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .vn-ticket__module-title {
+            font-size: .70rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--vn-amber);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .vn-ticket__module-aulas {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .vn-ticket__aula {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.3;
+        }
+
+        .vn-ticket__aula strong {
+            color: rgba(255, 255, 255, .95);
+            font-weight: 600;
             display: block;
         }
 
-        .vn-track-num {
-            font-family: var(--vn-ff-head);
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--vn-green);
-            margin-bottom: 6px;
-        }
-
-        .vn-track-title {
-            font-family: var(--vn-ff-head);
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--vn-text);
-        }
-
-        .vn-track-desc {
-            font-size: 0.88rem;
-            color: var(--vn-text-muted);
-            line-height: 1.65;
-            margin-bottom: 14px;
-        }
-
-        .vn-track-result {
-            font-size: 0.82rem;
-            color: var(--vn-green);
+        .vn-ticket__aula-details {
+            list-style: none;
+            padding: 4px 0 0 12px;
+            margin: 2px 0 0 0;
             display: flex;
-            align-items: flex-start;
-            gap: 6px;
-            line-height: 1.5;
+            flex-direction: column;
+            gap: 2px;
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .65);
+        }
+
+        .vn-ticket__aula-details li::before {
+            content: '◦ ';
+            color: var(--vn-green);
+            margin-right: 4px;
+        }
+
+        .vn-passport__controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .vn-passport__btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--vn-green);
+            color: var(--vn-text);
+            background: var(--vn-bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all var(--vn-transition);
+        }
+
+        .vn-passport__btn:hover {
+            background: var(--vn-green);
+            color: var(--vn-bg);
+        }
+
+        .vn-passport__btn:disabled {
+            opacity: .35;
+            cursor: not-allowed;
+        }
+
+        .vn-passport__dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .vn-passport__dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--vn-border-card);
+            cursor: pointer;
+            transition: all var(--vn-transition);
+            border: none;
+            padding: 0;
+        }
+
+        .vn-passport__dot.vn-active {
+            background: var(--vn-amber);
+            width: 24px;
+            border-radius: 999px;
         }
 
         .vn-bonus-card {
@@ -1307,13 +1501,22 @@
         }
 
         .vn-offer-box {
-            max-width: 680px;
-            margin-inline: auto;
+            max-width: 910px;
+            margin: 0 auto;
             background: var(--vn-bg-card);
             border: 1px solid rgba(46, 232, 122, 0.25);
             border-radius: var(--vn-radius-lg);
             overflow: hidden;
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @media (max-width: 560px) {
+            .vn-offer-box {
+                flex-direction: column;
+            }
         }
 
         .vn-offer-top {
@@ -1496,7 +1699,6 @@
         /* =============================================
        SEÇÃO 7: FAQ
     ============================================= */
-        .vn-faq {}
 
         .vn-faq-list {
             max-width: 760px;
@@ -1734,7 +1936,7 @@
      SEÇÃO 1: HERO
 ============================================================ -->
     <section class="vn-hero vn-section" id="hero" aria-labelledby="vn-h1">
-        <div class="vn-container">
+        <div class="vn-container vn-container-hero">
             <div class="vn-hero-inner">
 
                 <!-- Coluna esquerda: copy -->
@@ -1781,23 +1983,13 @@
                 <!-- Coluna direita: vídeo -->
                 <div class="vn-reveal vn-reveal-delay-2">
                     <div class="vn-video-wrap">
-                        <!-- Substitua pelo embed real: <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" ...></iframe> -->
-                        <div class="vn-video-placeholder" role="img"
-                            aria-label="Assista ao vídeo de apresentação do Método Viva Nômade">
-                            <div class="vn-play-btn" aria-hidden="true">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="#051008">
-                                    <polygon points="5,3 19,12 5,21" />
-                                </svg>
-                            </div>
-                            <p class="vn-video-label">Assista à apresentação do método</p>
-                        </div>
-                        <!-- ESPAÇO PARA VÍDEO: troque a div acima por:
-          <iframe width="100%" height="100%" style="position:absolute;inset:0;"
-            src="https://www.youtube.com/embed/SEU_VIDEO_ID?rel=0"
-            title="Método Viva Nômade — Apresentação" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-            allowfullscreen loading="lazy"></iframe>
-          -->
+
+                        <iframe width="867" height="488"
+                            src="https://www.youtube.com/embed/3p4CD1SpUeY?si=rqtgAjhX0VSbH330&amp;controls=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                     </div>
                 </div>
 
@@ -1942,54 +2134,50 @@
                             <div class="vn-stat-label">YouTube comunidade</div>
                         </div>
                     </div>
+                    <!-- Bloco depoimentos placeholder -->
+
+                    <div class="vn-reveal">
+                        <h3
+                            style="font-family:var(--vn-ff-head);font-size:1.1rem;font-weight:700;margin-bottom:24px;color:var(--vn-text-muted);text-align:center;">
+                            O que muda na prática
+                        </h3>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+                            <div
+                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
+                                <div style="font-size:1.8rem;margin-bottom:8px;">🕐</div>
+                                <div
+                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
+                                    Tempo</div>
+                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Você decide quando e onde
+                                    trabalhar.
+                                    Sem relógio de ponto.</div>
+                            </div>
+                            <div
+                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
+                                <div style="font-size:1.8rem;margin-bottom:8px;">💰</div>
+                                <div
+                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
+                                    Dinheiro</div>
+                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Países com custo de vida
+                                    menor = você
+                                    vive melhor com o mesmo salário.</div>
+                            </div>
+                            <div
+                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
+                                <div style="font-size:1.8rem;margin-bottom:8px;">🌐</div>
+                                <div
+                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
+                                    Liberdade</div>
+                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Nenhum chefe pode te dizer
+                                    onde você
+                                    precisa estar.</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Bloco depoimentos placeholder -->
-            <div class="vn-reveal">
-                <h3
-                    style="font-family:var(--vn-ff-head);font-size:1.1rem;font-weight:700;margin-bottom:24px;color:var(--vn-text-muted);text-align:center;">
-                    O que muda na prática
-                </h3>
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-                    <div
-                        style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                        <div style="font-size:1.8rem;margin-bottom:8px;">🕐</div>
-                        <div
-                            style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                            Tempo</div>
-                        <div style="font-size:0.85rem;color:var(--vn-text-muted);">Você decide quando e onde trabalhar.
-                            Sem relógio de ponto.</div>
-                    </div>
-                    <div
-                        style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                        <div style="font-size:1.8rem;margin-bottom:8px;">💰</div>
-                        <div
-                            style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                            Dinheiro</div>
-                        <div style="font-size:0.85rem;color:var(--vn-text-muted);">Países com custo de vida menor = você
-                            vive melhor com o mesmo salário.</div>
-                    </div>
-                    <div
-                        style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                        <div style="font-size:1.8rem;margin-bottom:8px;">🌐</div>
-                        <div
-                            style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                            Liberdade</div>
-                        <div style="font-size:0.85rem;color:var(--vn-text-muted);">Nenhum chefe pode te dizer onde você
-                            precisa estar.</div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Placeholder depoimentos -->
-            <div class="vn-reveal"
-                style="margin-top:40px;background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:24px 28px;text-align:center;">
-                <p style="font-size:0.82rem;color:var(--vn-text-dim);font-style:italic;">
-                    📸 Espaço reservado para depoimentos reais de alunos — (placeholder: inserir prints/vídeos após
-                    coleta)
-                </p>
-            </div>
 
         </div>
     </section>
@@ -2112,59 +2300,395 @@
                 O <em>Método Viva Nômade</em><br>completo, do zero ao primeiro voo
             </h2>
             <p class="vn-section-sub vn-reveal vn-reveal-delay-2">
-                Quatro trilhas práticas, sequenciadas para você sair da teoria e
-                executar sua primeira — ou próxima — experiência nômade sem sustos.
+                10 trilhas práticas, sequenciadas para você sair da teoria, criar um plano detalhado
+                e executar sua primeira — ou próxima — experiência nômade sem sustos.
             </p>
 
-            <div class="vn-tracks-grid">
+            <!-- Carrossel Passaporte -->
+            <div class="vn-passport vn-reveal">
+                <p class="vn-passport__title" aria-hidden="true">✈ Passaporte para a liberdade — suas trilhas de
+                    embarque</p>
 
-                <div class="vn-track-card vn-reveal vn-reveal-delay-1">
-                    <span class="vn-track-icon" aria-hidden="true">🧠</span>
-                    <p class="vn-track-num">Trilha 01</p>
-                    <h3 class="vn-track-title">Mentalidade Nômade</h3>
-                    <p class="vn-track-desc">
-                        Desconstrua as crenças que te prendem. Entenda o mapa mental de quem vive viajando
-                        e como fazer a transição sem surtar — mesmo com medo e insegurança.
-                    </p>
-                    <p class="vn-track-result">✓ Resultado: você sabe exatamente o que precisa fazer (e parar de fazer)
-                        pra começar.</p>
+                <div class="vn-passport__track-wrap" role="region" aria-label="Carrossel de trilhas do curso"
+                    aria-live="polite">
+                    <div class="vn-passport__track" id="vn-track">
+
+                        <!-- TRILHA 1: Comece por Aqui -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 1: Comece por Aqui">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 01</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🛂</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Comece por Aqui</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Bem-vindo</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aula 1 – Seja Bem-vindo</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Boas-vindas e parabéns pela iniciativa</li>
+                                            </ul>
+                                        </li>
+                                        <li class="vn-ticket__aula"><strong>Aula 2 – Não pule essa aula</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Importância de aprender com quem já vive isso</li>
+                                                <li>Envie #sounomade no Instagram</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Como usar o curso</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aula 1 – Jornada de aprendizado</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Teoria → Planejamento → Plano Prático → Primeira Viagem</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3 – Minha história nômade</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aula 1 – História do Chris</strong></li>
+                                        <li class="vn-ticket__aula"><strong>Aula 2 – Países que já visitei</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você sabe para onde vai e como chegar lá</div>
+                        </div>
+
+                        <!-- TRILHA 2: Mentalidade -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 2: Mentalidade Nômade">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 02</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🧠</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Mentalidade Nômade</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Mentalidade</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aulas 1-5</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Evitar arrependimento da decisão</li>
+                                                <li>Disciplina, produtividade e rotina</li>
+                                                <li>Hacks e técnicas práticas</li>
+                                            </ul>
+                                        </li>
+                                        <li class="vn-ticket__aula"><strong>Aula 6-7</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Lidar com solidão e isolamento</li>
+                                                <li>Certeza da decisão de ser nômade</li>
+                                            </ul>
+                                        </li>
+                                        <li class="vn-ticket__aula"><strong>Aulas 8-11</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Adaptação cultural e apoio familiar</li>
+                                                <li>Coragem progressiva e síndrome do impostor</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Cabeça preparada para o que vem — sem dramas</div>
+                        </div>
+
+                        <!-- TRILHA 3: Renda -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 3: Renda Digital">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 03</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">💰</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Renda Digital</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Sua posição</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aula 1-2 – Onde você está</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Já tem renda, tem dinheiro ou sem renda?</li>
+                                                <li>Como reduzir custo de vida</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Fontes Digitais</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Design, Vídeo, Webdesign, Conteúdo,
+                                                IA</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Infoprodutos e técnica polaroid</li>
+                                                <li>Renda funcionando antes de embarcar</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3-4 – Presencial & Segurança</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Trabalhos locais e planejamento
+                                                financeiro</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Renda funcionando antes de embarcar</div>
+                        </div>
+
+                        <!-- TRILHA 4: Planejamento -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 4: Planejamento Inteligente">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 04</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">📋</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Planejamento Inteligente</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Financeiro</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Planilha financeira para nômades</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Documentos</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Checklist de viagem</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Documentos, vacinas, itens essenciais</li>
+                                                <li>Guia sobre vistos e passaportes</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3 – Execução</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Resolver problemas burocráticos</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Escolher rotas, criar planos A, B e C</li>
+                                                <li>Mapa financeiro de viagem</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você chega preparado para o inesperado</div>
+                        </div>
+
+                        <!-- TRILHA 5: Moradia -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 5: Moradia Segura">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 05</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🏠</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Moradia Segura</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Segurança</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>1-3</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Como escolher bons lugares e evitar golpes</li>
+                                                <li>Usar TripAdvisor/Booking com segurança</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Conectividade</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Internet, chips eSIM, cafés e
+                                                coworkings</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3-5 – Ajustes & Adversidades</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Rearranjar rota, lidar com
+                                                imprevistos</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você dorme bem e trabalha com segurança</div>
+                        </div>
+
+                        <!-- TRILHA 6: Transporte -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 6: Transporte Estratégico">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 06</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">✈️</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Transporte Estratégico</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Aviação</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Quando voo é cancelado ou perde
+                                                conexão</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>O que fazer quando extravia a mala</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Aeroporto</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Comprar passagens baratas, usar
+                                                milhas</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3 – Dicas Gerais</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Transportes locais, se localizar, guia
+                                                geral</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você voa mais gastando menos — nunca fica perdido</div>
+                        </div>
+
+                        <!-- TRILHA 7: Alimentação -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 7: Alimentação Nômade">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 07</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🍽️</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Alimentação Nômade</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Estratégias</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>1. Comer bem em qualquer lugar</strong></li>
+                                        <li class="vn-ticket__aula"><strong>2. Comer gastando pouco</strong></li>
+                                        <li class="vn-ticket__aula"><strong>3. Restrições alimentares</strong></li>
+                                        <li class="vn-ticket__aula"><strong>4. Barreiras linguísticas</strong></li>
+                                        <li class="vn-ticket__aula"><strong>5. Comida brasileira fora do Brasil</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você come bem, gasta pouco e aprecia cada cultura</div>
+                        </div>
+
+                        <!-- TRILHA 8: Lazer -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 8: Lazer Nômade">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 08</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🎒</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Lazer Nômade</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Equilíbrio</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Trabalho vs Lazer</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Turismo econômico e atividades locais</li>
+                                                <li>Adaptação cultural, dicas por país</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Experiências</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Cyber café, cafe, restaurante,
+                                                museu</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Praias, balada, pontos turísticos, festas</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você vive experiências reais — não só tira foto</div>
+                        </div>
+
+                        <!-- TRILHA 9: Plano Prático -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 9: Sair de Casa">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 09</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🚀</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Missão: Primeira Viagem</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Protocolo</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Teoria → Escolha do plano</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Cidade → Estado → País → Continente</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulos 2-5 – Planos Práticos</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Passo a passo em cada etapa</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Checklist completo, gerenciar imprevistos</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você sai do Brasil com data marcada e plano</div>
+                        </div>
+
+                        <!-- TRILHA FINAL -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha Final: Viva, Nômade!">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha Final</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🌍</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Viva, Nômade!</h3>
+                            <div class="vn-ticket__modules">
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 1 – Parabéns</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Aula motivacional de chegada</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 2 – Evolução Contínua</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Evitar estagnação nômade</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>Saúde física, mental, intelectual e financeira</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="vn-ticket__module">
+                                    <h4 class="vn-ticket__module-title">Módulo 3-4 – Reflexão Sincera</h4>
+                                    <ul class="vn-ticket__module-aulas">
+                                        <li class="vn-ticket__aula"><strong>Vida após anos como nômade</strong>
+                                            <ul class="vn-ticket__aula-details">
+                                                <li>E se eu voltar? Amigos me ultrapassarem?</li>
+                                                <li>Conte suas histórias</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="vn-ticket__result">Você não só viaja — você vive de verdade</div>
+                        </div>
+
+                    </div><!-- /track -->
                 </div>
 
-                <div class="vn-track-card vn-reveal vn-reveal-delay-2">
-                    <span class="vn-track-icon" aria-hidden="true">💰</span>
-                    <p class="vn-track-num">Trilha 02</p>
-                    <h3 class="vn-track-title">Planejamento Financeiro</h3>
-                    <p class="vn-track-desc">
-                        Como montar um orçamento real de nômade, escolher destinos pelo custo-benefício
-                        e otimizar cada gasto — sem cortar qualidade de vida.
-                    </p>
-                    <p class="vn-track-result">✓ Resultado: orçamento mensal claro e destinos escolhidos com critério.
-                    </p>
+                <!-- Controles -->
+                <div class="vn-passport__controls">
+                    <button class="vn-passport__btn" id="vn-prev" aria-label="Trilha anterior" disabled>‹</button>
+                    <div class="vn-passport__dots" id="vn-dots" role="tablist" aria-label="Navegação de trilhas"></div>
+                    <button class="vn-passport__btn" id="vn-next" aria-label="Próxima trilha">›</button>
                 </div>
-
-                <div class="vn-track-card vn-reveal vn-reveal-delay-3">
-                    <span class="vn-track-icon" aria-hidden="true">🏠</span>
-                    <p class="vn-track-num">Trilha 03</p>
-                    <h3 class="vn-track-title">Moradia e Transporte</h3>
-                    <p class="vn-track-desc">
-                        Os segredos para encontrar acomodação barata e boa em qualquer país,
-                        passagens aéreas por preços absurdos e como se mover sem gastar uma fortuna.
-                    </p>
-                    <p class="vn-track-result">✓ Resultado: os dois maiores custos do nomadismo sob controle.</p>
-                </div>
-
-                <div class="vn-track-card vn-reveal vn-reveal-delay-4">
-                    <span class="vn-track-icon" aria-hidden="true">🚀</span>
-                    <p class="vn-track-num">Trilha 04</p>
-                    <h3 class="vn-track-title">Protocolo Missão Primeira Viagem</h3>
-                    <p class="vn-track-desc">
-                        O passo a passo completo — de documentos e seguro saúde a roteiro e checklist —
-                        para executar sua primeira viagem internacional com segurança e muito menos custo.
-                    </p>
-                    <p class="vn-track-result">✓ Resultado: primeira viagem planejada e executada, sem improvisos.</p>
-                </div>
-
-            </div>
+            </div><!-- /passport -->
 
             <!-- BÔNUS -->
             <div class="vn-bonus-card vn-reveal">
@@ -2247,15 +2771,21 @@
                 <div class="vn-offer-top">
                     <p class="vn-offer-title">O que você recebe:</p>
                     <ul class="vn-offer-includes" aria-label="O que está incluído na oferta">
-                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Método Viva Nômade completo (4
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Método Viva Nômade completo (10
                             trilhas)</li>
-                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 01 — Mentalidade Nômade</li>
-                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 02 — Planejamento Financeiro
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 01 — Comece por Aqui</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 02 — Mentalidade Nômade</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 03 — Renda Digital</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 04 — Planejamento Inteligente
                         </li>
-                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 03 — Moradia e Transporte
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 05 — Moradia Segura</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 06 — Transporte Estratégico
                         </li>
-                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 04 — Protocolo Missão
-                            Primeira Viagem</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 07 — Alimentação Nômade</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 08 — Lazer Nômade</li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha 09 — Missão Primeira Viagem
+                        </li>
+                        <li><span class="vn-check-mini" aria-hidden="true">✓</span> Trilha Final — Viva, Nômade!</li>
                         <li><span class="vn-check-mini" aria-hidden="true">✓</span> 🎁 Bônus: Profissões Digitais (renda
                             online do zero)</li>
                         <li><span class="vn-check-mini" aria-hidden="true">✓</span> Acesso imediato e vitalício ao
@@ -2284,18 +2814,11 @@
                         <span class="vn-security-item" role="listitem">🛡️ Compra 100% segura</span>
                         <span class="vn-security-item" role="listitem">⚡ Acesso imediato</span>
                     </div>
+
                 </div>
 
-                <div class="vn-guarantee-banner">
-                    <span class="vn-guarantee-icon" aria-hidden="true">🛡️</span>
-                    <div class="vn-guarantee-text">
-                        <strong>Garantia incondicional de 7 dias</strong>
-                        <p>
-                            Se por qualquer motivo você não gostar do conteúdo nos primeiros 7 dias,
-                            devolvemos 100% do seu dinheiro. Sem burocracia, sem perguntas.
-                        </p>
-                    </div>
-                </div>
+
+
             </div>
 
         </div>
@@ -2729,6 +3252,182 @@
                     }
                 });
             });
+
+            /* ─── CARROSSEL PASSAPORTE ─── */
+            const VNCarousel = {
+                // Constantes
+                BREAKPOINTS: { desktop: 1280, tablet: 860 },
+                SWIPE_THRESHOLD: 50,
+
+                // Estado
+                state: {
+                    currentIdx: 0,
+                    visibleCount: 1,
+                    totalTickets: 0
+                },
+
+                // Elementos DOM
+                elements: {
+                    track: document.getElementById('vn-track'),
+                    prevBtn: document.getElementById('vn-prev'),
+                    nextBtn: document.getElementById('vn-next'),
+                    dotsContainer: document.getElementById('vn-dots'),
+                    trackWrap: null
+                },
+
+                // Inicialização
+                init() {
+                    if (!this.isValid()) return;
+
+                    this.elements.trackWrap = this.elements.track.parentElement;
+                    this.state.totalTickets = this.elements.track.querySelectorAll('.vn-ticket').length;
+
+                    this.setup();
+                    this.bindEvents();
+                    this.render();
+                },
+
+                // Validação
+                isValid() {
+                    return this.elements.track && this.elements.prevBtn && this.elements.nextBtn;
+                },
+
+                // Calcular quantidade visível
+                getVisibleCount() {
+                    if (window.innerWidth >= this.BREAKPOINTS.desktop) return 3;
+                    if (window.innerWidth >= this.BREAKPOINTS.tablet) return 2;
+                    return 1;
+                },
+
+                // Atualizar visibleCount e clampar índice
+                updateVisibleCount() {
+                    const prevVisible = this.state.visibleCount;
+                    this.state.visibleCount = this.getVisibleCount();
+
+                    // Reajustar índice se necessário
+                    if (this.state.currentIdx > this.getMaxIndex()) {
+                        this.state.currentIdx = Math.max(0, this.getMaxIndex());
+                    }
+
+                    return prevVisible !== this.state.visibleCount;
+                },
+
+                getMaxIndex() {
+                    return Math.max(0, this.state.totalTickets - this.state.visibleCount);
+                },
+
+                // Criar indicadores
+                buildDots() {
+                    this.elements.dotsContainer.innerHTML = '';
+                    const pages = Math.ceil(this.state.totalTickets / this.state.visibleCount);
+
+                    for (let i = 0; i < pages; i++) {
+                        const dot = document.createElement('button');
+                        dot.className = `vn-passport__dot${i === 0 ? ' vn-active' : ''}`;
+                        dot.setAttribute('aria-label', `Ir para trilha ${i * this.state.visibleCount + 1}`);
+                        dot.setAttribute('role', 'tab');
+                        dot.setAttribute('aria-selected', i === 0);
+                        dot.addEventListener('click', () => this.goTo(i * this.state.visibleCount));
+                        this.elements.dotsContainer.appendChild(dot);
+                    }
+                },
+
+                // Atualizar posição e ui
+                updateCarousel() {
+                    const cardWidth = this.elements.trackWrap.offsetWidth / this.state.visibleCount;
+                    const translateX = this.state.currentIdx * cardWidth;
+
+                    this.elements.track.style.transform = `translateX(-${translateX}px)`;
+                    this.updateButtons();
+                    this.updateDots();
+                },
+
+                updateButtons() {
+                    this.elements.prevBtn.disabled = this.state.currentIdx === 0;
+                    this.elements.nextBtn.disabled = this.state.currentIdx >= this.getMaxIndex();
+                },
+
+                updateDots() {
+                    const dots = this.elements.dotsContainer.querySelectorAll('.vn-passport__dot');
+                    const activePage = Math.floor(this.state.currentIdx / this.state.visibleCount);
+
+                    dots.forEach((dot, i) => {
+                        const isActive = i === activePage;
+                        dot.classList.toggle('vn-active', isActive);
+                        dot.setAttribute('aria-selected', isActive);
+                    });
+                },
+
+                // Navegar para índice
+                goTo(idx) {
+                    this.state.currentIdx = Math.max(0, Math.min(idx, this.getMaxIndex()));
+                    this.updateCarousel();
+                },
+
+                // Handlers
+                handlePrev() {
+                    this.goTo(this.state.currentIdx - this.state.visibleCount);
+                },
+
+                handleNext() {
+                    this.goTo(this.state.currentIdx + this.state.visibleCount);
+                },
+
+                handleSwipe(startX, endX) {
+                    const diff = startX - endX;
+                    if (Math.abs(diff) > this.SWIPE_THRESHOLD) {
+                        diff > 0 ? this.handleNext() : this.handlePrev();
+                    }
+                },
+
+                handleKeyboard(key) {
+                    if (key === 'ArrowRight') this.handleNext();
+                    if (key === 'ArrowLeft') this.handlePrev();
+                },
+
+                // Configurar listeners
+                bindEvents() {
+                    // Botões
+                    this.elements.prevBtn.addEventListener('click', () => this.handlePrev());
+                    this.elements.nextBtn.addEventListener('click', () => this.handleNext());
+
+                    // Touch
+                    let touchStartX = 0;
+                    this.elements.trackWrap.addEventListener('touchstart', (e) => {
+                        touchStartX = e.touches[0].clientX;
+                    }, { passive: true });
+
+                    this.elements.trackWrap.addEventListener('touchend', (e) => {
+                        this.handleSwipe(touchStartX, e.changedTouches[0].clientX);
+                    }, { passive: true });
+
+                    // Teclado
+                    this.elements.trackWrap.addEventListener('keydown', (e) => {
+                        this.handleKeyboard(e.key);
+                    });
+
+                    // Resize
+                    window.addEventListener('resize', () => {
+                        if (this.updateVisibleCount()) {
+                            this.buildDots();
+                        }
+                        this.updateCarousel();
+                    });
+                },
+
+                // Setup
+                setup() {
+                    this.state.visibleCount = this.getVisibleCount();
+                },
+
+                // Renderizar
+                render() {
+                    this.buildDots();
+                    this.updateCarousel();
+                }
+            };
+
+            VNCarousel.init();
 
         })();
     </script>

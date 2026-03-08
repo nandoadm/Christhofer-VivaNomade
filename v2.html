@@ -1,0 +1,3674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método Viva Nômade — Viaje o Mundo Gastando Pouco</title>
+    <meta name="description"
+        content="Aprenda o método que Chris usou para viajar +40 países com planejamento inteligente. Do zero até a primeira viagem. Garantia de 7 dias. Comece agora." />
+    <link rel="canonical" href="https://seudominio.com.br/metodo-viva-nomade" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Método Viva Nômade — Viaje o Mundo Gastando Pouco" />
+    <meta property="og:description"
+        content="Planejamento inteligente + custo de vida estratégico. Do zero até a primeira viagem. +40 países. Garantia de 7 dias." />
+    <meta property="og:url" content="https://seudominio.com.br/metodo-viva-nomade" />
+    <meta property="og:image" content="https://seudominio.com.br/og-image.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Viva Nômade" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Método Viva Nômade — Viaje o Mundo Gastando Pouco" />
+    <meta name="twitter:description"
+        content="Do zero até a primeira viagem. Planejamento inteligente. +40 países. Garantia de 7 dias." />
+    <meta name="twitter:image" content="https://seudominio.com.br/og-image.jpg" />
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>✈️</text></svg>" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* =============================================
+       VARIÁVEIS & RESET
+    ============================================= */
+        :root {
+            --azul: #3AAFDB;
+            --azul-deep: #1A7FAB;
+            --azul-light: #D6F0FA;
+            --azul-sky: #EBF8FE;
+            --laranja: #F57C2B;
+            --laranja-deep: #D4621A;
+            --laranja-glow: rgba(245, 124, 43, .25);
+            --verde: #4DC9A0;
+            --verde-light: #D3F5EA;
+            --verde-deep: #2DA87D;
+            --cinza-escuro: #1C1C1E;
+            --cinza-medio: #4A4A52;
+            --cinza-leve: #8A8A96;
+            --cinza-bg: #F5F5F7;
+            --branco: #FFFFFF;
+            --sombra-md: 0 8px 32px rgba(0, 0, 0, .10);
+            --sombra-lg: 0 20px 60px rgba(0, 0, 0, .14);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 36px;
+            --max-w: 1200px;
+            --transition: .3s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--branco);
+            color: var(--cinza-escuro);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            background: none;
+        }
+
+        /* =============================================
+       UTILITÁRIOS
+    ============================================= */
+        .vn-container {
+            width: 100%;
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .vn-section {
+            padding: 72px 0;
+        }
+
+        @media (max-width: 768px) {
+            .vn-section {
+                padding: 56px 0;
+            }
+        }
+
+        .vn-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 999px;
+        }
+
+        .vn-tag--azul {
+            background: var(--azul-light);
+            color: var(--azul-deep);
+        }
+
+        .vn-tag--verde {
+            background: var(--verde-light);
+            color: var(--verde-deep);
+        }
+
+        .vn-tag--laranja {
+            background: #FEE8D6;
+            color: var(--laranja-deep);
+        }
+
+        .vn-h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.75rem, 4vw, 2.8rem);
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--cinza-escuro);
+        }
+
+        .vn-h2 em {
+            font-style: italic;
+            color: var(--azul-deep);
+        }
+
+        .vn-lead {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--cinza-medio);
+            line-height: 1.7;
+            max-width: 620px;
+        }
+
+        /* =============================================
+       BOTÕES (CTA)
+    ============================================= */
+        .vn-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: .01em;
+            border-radius: 999px;
+            padding: 16px 36px;
+            transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .vn-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .22) 50%, transparent 100%);
+            transform: translateX(-100%);
+            transition: transform .55s ease;
+        }
+
+        .vn-btn:hover::after {
+            transform: translateX(100%);
+        }
+
+        .vn-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px var(--laranja-glow);
+        }
+
+        .vn-btn:active {
+            transform: translateY(0) scale(.97);
+        }
+
+        .vn-btn--primary {
+            background: linear-gradient(135deg, var(--laranja) 0%, var(--laranja-deep) 100%);
+            color: var(--branco);
+            box-shadow: 0 6px 24px var(--laranja-glow);
+        }
+
+        .vn-btn--ghost {
+            background: transparent;
+            border: 2px solid var(--azul);
+            color: var(--azul-deep);
+        }
+
+        .vn-btn--ghost:hover {
+            background: var(--azul-light);
+            box-shadow: none;
+            transform: translateY(-2px);
+        }
+
+        .vn-btn--white {
+            background: var(--branco);
+            color: var(--laranja-deep);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .12);
+        }
+
+        .vn-btn--white:hover {
+            box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
+        }
+
+        .vn-btn--lg {
+            padding: 20px 48px;
+            font-size: 1.1rem;
+        }
+
+        /* Focus visible */
+        :focus-visible {
+            outline: 3px solid var(--laranja);
+            outline-offset: 3px;
+        }
+
+        /* =============================================
+       SCROLL REVEAL
+    ============================================= */
+        .vn-reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .vn-reveal.vn-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .vn-reveal--delay-1 {
+            transition-delay: .1s;
+        }
+
+        .vn-reveal--delay-2 {
+            transition-delay: .2s;
+        }
+
+        .vn-reveal--delay-3 {
+            transition-delay: .3s;
+        }
+
+        .vn-reveal--delay-4 {
+            transition-delay: .4s;
+        }
+
+        /* =============================================
+       STICKY CTA
+    ============================================= */
+        #vn-sticky {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 27, 30, .97);
+            backdrop-filter: blur(12px);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            transform: translateY(100%);
+            transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+            border-top: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        #vn-sticky.vn-sticky--visible {
+            transform: translateY(0);
+        }
+
+        #vn-sticky .vn-sticky__text {
+            color: var(--branco);
+            font-size: .9rem;
+            line-height: 1.3;
+        }
+
+        #vn-sticky .vn-sticky__text strong {
+            color: var(--laranja);
+        }
+
+        @media (max-width: 480px) {
+            #vn-sticky {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* =============================================
+       SEÇÃO 1 — HERO
+    ============================================= */
+        #vn-hero {
+            background: linear-gradient(160deg, #0A2030 0%, #0D3348 40%, #1A5978 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 80px;
+        }
+
+        #vn-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 80% 110%, rgba(58, 175, 219, .18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 40% at 10% -10%, rgba(245, 124, 43, .10) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* Decorative dots grid */
+        #vn-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, .06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+
+        .vn-hero__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 900px) {
+            .vn-hero__inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .vn-hero__eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .vn-hero__eyebrow-line {
+            width: 32px;
+            height: 2px;
+            background: var(--laranja);
+        }
+
+        .vn-hero__eyebrow-text {
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--laranja);
+        }
+
+        .vn-hero__h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            font-weight: 900;
+            line-height: 1.08;
+            color: var(--branco);
+            margin-bottom: 20px;
+        }
+
+        .vn-hero__h1 .vn-hero__strike {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        .vn-hero__h1 .vn-hero__accent {
+            color: var(--laranja);
+            font-style: italic;
+        }
+
+        .vn-hero__sub {
+            font-size: clamp(.95rem, 2vw, 1.15rem);
+            color: rgba(255, 255, 255, .75);
+            line-height: 1.65;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .vn-hero__bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+
+        .vn-hero__bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: rgba(255, 255, 255, .88);
+            font-size: .97rem;
+            line-height: 1.5;
+        }
+
+        .vn-hero__bullet-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            background: var(--laranja);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            margin-top: 2px;
+        }
+
+        .vn-hero__ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 36px;
+        }
+
+        .vn-hero__seals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .vn-seal {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .07);
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: var(--radius-sm);
+            padding: 8px 14px;
+        }
+
+        .vn-seal__icon {
+            font-size: 1.1rem;
+        }
+
+        .vn-seal__text {
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .75);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* Hero Visual Side */
+        .vn-hero__visual {
+            position: relative;
+        }
+
+        .vn-hero__img-wrap {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--azul-deep) 0%, #0A2030 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--sombra-lg);
+        }
+
+        .vn-hero__img-placeholder {
+            text-align: center;
+            color: rgba(255, 255, 255, .5);
+            padding: 40px;
+        }
+
+        .vn-hero__img-placeholder .vn-hero__img-icon {
+            font-size: 4rem;
+            margin-bottom: 12px;
+        }
+
+        .vn-hero__img-placeholder p {
+            font-size: .85rem;
+            line-height: 1.5;
+        }
+
+        /* VSL placeholder */
+        .vn-hero__vsl {
+            position: absolute;
+            bottom: -22px;
+            left: -22px;
+            right: -22px;
+            background: rgba(10, 22, 36, .92);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            box-shadow: var(--sombra-md);
+        }
+
+        .vn-hero__vsl-play {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: var(--laranja);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .vn-hero__vsl-play:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 0 8px var(--laranja-glow);
+        }
+
+        .vn-hero__vsl-text {
+            flex: 1;
+        }
+
+        .vn-hero__vsl-title {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 3px;
+        }
+
+        .vn-hero__vsl-sub {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .55);
+        }
+
+        @media (max-width: 900px) {
+            .vn-hero__img-wrap {
+                aspect-ratio: 16/9;
+            }
+
+            .vn-hero__vsl {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                margin-top: 16px;
+            }
+        }
+
+        /* =============================================
+       SEÇÃO 2 — DIAGNÓSTICO
+    ============================================= */
+        #vn-diagnostico {
+            background: var(--cinza-bg);
+            padding: 80px 0;
+        }
+
+        .vn-diag__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .vn-diag__header .vn-h2 {
+            margin: 14px 0 18px;
+        }
+
+        .vn-diag__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 680px) {
+            .vn-diag__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-diag__card {
+            border-radius: var(--radius-md);
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vn-diag__card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .vn-diag__card--cinza {
+            background: #1C1C1E;
+            color: var(--branco);
+        }
+
+        .vn-diag__card--cinza::before {
+            background: #555;
+        }
+
+        .vn-diag__card--colorido {
+            background: linear-gradient(135deg, var(--azul-deep) 0%, #0D3348 100%);
+            color: var(--branco);
+        }
+
+        .vn-diag__card--colorido::before {
+            background: linear-gradient(90deg, var(--laranja), var(--verde));
+        }
+
+        .vn-diag__card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .vn-diag__card-icon {
+            font-size: 2rem;
+        }
+
+        .vn-diag__card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .vn-diag__card-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .vn-diag__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .93rem;
+            line-height: 1.5;
+        }
+
+        .vn-diag__item-dot {
+            flex-shrink: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 6px;
+        }
+
+        .vn-diag__card--cinza .vn-diag__item-dot {
+            background: #666;
+        }
+
+        .vn-diag__card--colorido .vn-diag__item-dot {
+            background: var(--verde);
+        }
+
+        /* Sensoriais (mundo cinza) */
+        .vn-diag__sensorial {
+            background: var(--branco);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            border-left: 4px solid var(--azul);
+            margin-bottom: 48px;
+            box-shadow: var(--sombra-md);
+        }
+
+        .vn-diag__sensorial p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cinza-medio);
+            font-style: italic;
+        }
+
+        .vn-diag__sensorial strong {
+            color: var(--cinza-escuro);
+            font-style: normal;
+        }
+
+        /* Checklist */
+        .vn-diag__check {
+            background: var(--branco);
+            border-radius: var(--radius-md);
+            padding: 36px 40px;
+            box-shadow: var(--sombra-md);
+            margin-bottom: 36px;
+        }
+
+        .vn-diag__check-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--cinza-escuro);
+        }
+
+        .vn-diag__check-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        @media (max-width: 580px) {
+            .vn-diag__check-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-diag__check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .92rem;
+            color: var(--cinza-medio);
+        }
+
+        .vn-diag__check-box {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            border: 2px solid var(--azul);
+            background: var(--azul-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .7rem;
+            color: var(--azul-deep);
+            font-weight: 700;
+        }
+
+        .vn-diag__cta-wrap {
+            text-align: center;
+        }
+
+        /* =============================================
+       SEÇÃO 3 — AUTORIDADE
+    ============================================= */
+        #vn-autoridade {
+            background: var(--branco);
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .vn-aut__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        @media (max-width: 860px) {
+            .vn-aut__inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        .vn-aut__narrative {
+            font-size: .97rem;
+            line-height: 1.8;
+            color: var(--cinza-medio);
+        }
+
+        .vn-aut__narrative p {
+            margin-bottom: 16px;
+        }
+
+        .vn-aut__narrative p:last-child {
+            margin-bottom: 0;
+        }
+
+        .vn-aut__narrative strong {
+            color: var(--cinza-escuro);
+        }
+
+        .vn-aut__narrative .vn-aut__quote {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            font-style: italic;
+            color: var(--azul-deep);
+            border-left: 3px solid var(--azul);
+            padding-left: 20px;
+            margin: 28px 0;
+            line-height: 1.5;
+        }
+
+        /* Contadores */
+        .vn-aut__counters {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .vn-counter {
+            background: var(--azul-sky);
+            border-radius: var(--radius-md);
+            padding: 28px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vn-counter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--azul), var(--verde));
+        }
+
+        .vn-counter__num {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--azul-deep);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .vn-counter__label {
+            font-size: .82rem;
+            color: var(--cinza-medio);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        /* Foto autoridade */
+        .vn-aut__img-wrap {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--azul-deep) 0%, #082030 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--sombra-lg);
+            position: relative;
+        }
+
+        .vn-aut__img-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            right: 24px;
+            background: rgba(10, 22, 36, .9);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            color: var(--branco);
+            border: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .vn-aut__img-badge-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .vn-aut__img-badge-role {
+            font-size: .78rem;
+            color: var(--azul);
+            font-weight: 600;
+        }
+
+        .vn-aut__img-placeholder {
+            text-align: center;
+            color: rgba(255, 255, 255, .4);
+            padding: 40px;
+        }
+
+        .vn-aut__img-placeholder .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .vn-aut__img-placeholder p {
+            font-size: .8rem;
+            line-height: 1.5;
+        }
+
+        /* Social proof placeholder */
+        .vn-social-proof {
+            background: var(--cinza-bg);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .vn-social-proof__label {
+            font-size: .8rem;
+            color: var(--cinza-leve);
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .vn-social-proof__photos {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 10px;
+        }
+
+        .vn-social-proof__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid var(--branco);
+            background: var(--azul-deep);
+            margin-left: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--branco);
+        }
+
+        .vn-social-proof__avatar:first-child {
+            margin-left: 0;
+        }
+
+        .vn-social-proof__text {
+            font-size: .85rem;
+            color: var(--cinza-medio);
+        }
+
+        .vn-social-proof__text strong {
+            color: var(--cinza-escuro);
+        }
+
+        /* =============================================
+       SEÇÃO 4 — MECANISMO / OBJEÇÕES
+    ============================================= */
+        #vn-mecanismo {
+            background: linear-gradient(160deg, #0D3348 0%, #0A2030 100%);
+            padding: 88px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #vn-mecanismo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(58, 175, 219, .1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .vn-mec__tag {
+            margin-bottom: 20px;
+        }
+
+        .vn-mec__h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            font-weight: 900;
+            color: var(--branco);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        .vn-mec__h2 em {
+            color: var(--laranja);
+            font-style: italic;
+        }
+
+        .vn-mec__lead {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, .7);
+            max-width: 540px;
+            margin-bottom: 56px;
+            line-height: 1.7;
+        }
+
+        /* 3 erros */
+        .vn-erros {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 64px;
+        }
+
+        @media (max-width: 760px) {
+            .vn-erros {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-erro {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: var(--radius-md);
+            padding: 28px 24px;
+            position: relative;
+        }
+
+        .vn-erro__num {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, .06);
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            line-height: 1;
+        }
+
+        .vn-erro__icon {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .vn-erro__title {
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .vn-erro__desc {
+            font-size: .87rem;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.6;
+        }
+
+        /* 3 pilares */
+        .vn-pilares {
+            margin-bottom: 56px;
+        }
+
+        .vn-pilares__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            color: var(--branco);
+            font-weight: 700;
+            margin-bottom: 28px;
+            text-align: center;
+        }
+
+        .vn-pilares__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 680px) {
+            .vn-pilares__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-pilar {
+            border-radius: var(--radius-md);
+            padding: 32px 28px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vn-pilar:nth-child(1) {
+            background: rgba(58, 175, 219, .12);
+            border: 1px solid rgba(58, 175, 219, .2);
+        }
+
+        .vn-pilar:nth-child(2) {
+            background: rgba(245, 124, 43, .12);
+            border: 1px solid rgba(245, 124, 43, .2);
+        }
+
+        .vn-pilar:nth-child(3) {
+            background: rgba(77, 201, 160, .12);
+            border: 1px solid rgba(77, 201, 160, .2);
+        }
+
+        .vn-pilar__icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+        }
+
+        .vn-pilar__title {
+            font-weight: 700;
+            color: var(--branco);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .vn-pilar__desc {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .6);
+            line-height: 1.6;
+        }
+
+        /* Mini orçamento */
+        .vn-orcamento {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: var(--radius-md);
+            padding: 36px;
+            margin-bottom: 44px;
+        }
+
+        .vn-orcamento__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--branco);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vn-orcamento__rows {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .vn-orcamento__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            font-size: .9rem;
+        }
+
+        .vn-orcamento__row-label {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .vn-orcamento__row-val {
+            color: var(--verde);
+            font-weight: 700;
+        }
+
+        .vn-orcamento__total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            color: var(--branco);
+            font-size: 1rem;
+        }
+
+        .vn-orcamento__total-val {
+            color: var(--verde);
+            font-size: 1.1rem;
+        }
+
+        .vn-orcamento__disclaimer {
+            font-size: .76rem;
+            color: rgba(255, 255, 255, .35);
+            margin-top: 14px;
+            font-style: italic;
+        }
+
+        .vn-mec__cta {
+            text-align: center;
+        }
+
+        /* =============================================
+       SEÇÃO 5 — O PRODUTO / MÓDULOS
+    ============================================= */
+        #vn-produto {
+            background: var(--branco);
+            padding: 88px 0;
+        }
+
+        .vn-prod__header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .vn-prod__header .vn-h2 {
+            margin: 14px 0 16px;
+        }
+
+        .vn-prod__header .vn-lead {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Carrossel Passaporte */
+        .vn-passport {
+            margin: 52px 0 64px;
+            position: relative;
+        }
+
+        .vn-passport__title {
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.2rem;
+            color: var(--cinza-medio);
+            font-style: italic;
+            margin-bottom: 28px;
+        }
+
+        .vn-passport__track-wrap {
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            position: relative;
+        }
+
+        .vn-passport__track {
+            display: flex;
+            transition: transform .45s cubic-bezier(.4, 0, .2, 1);
+            will-change: transform;
+        }
+
+        .vn-ticket {
+            flex: 0 0 100%;
+            background: linear-gradient(135deg, #0D3348 0%, #1A5978 100%);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 860px) {
+            .vn-ticket {
+                flex: 0 0 calc(50% - 12px);
+                margin-right: 24px;
+            }
+
+            .vn-passport__track-wrap {
+                overflow: hidden;
+            }
+        }
+
+        .vn-ticket::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--laranja), var(--verde));
+        }
+
+        /* Decorative stamp */
+        .vn-ticket::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 18px solid rgba(255, 255, 255, .04);
+        }
+
+        .vn-ticket__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .vn-ticket__trilha-num {
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--laranja);
+            background: rgba(245, 124, 43, .12);
+            border: 1px solid rgba(245, 124, 43, .2);
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        .vn-ticket__stamp {
+            font-size: 1.8rem;
+            opacity: .7;
+        }
+
+        .vn-ticket__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .vn-ticket__learns {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .vn-ticket__learn {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.5;
+        }
+
+        .vn-ticket__learn::before {
+            content: '→';
+            color: var(--verde);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .vn-ticket__result {
+            background: rgba(77, 201, 160, .12);
+            border: 1px solid rgba(77, 201, 160, .2);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            font-size: .82rem;
+            color: var(--verde);
+            font-weight: 600;
+        }
+
+        .vn-ticket__result::before {
+            content: '✓ Resultado: ';
+        }
+
+        /* Carrossel controles */
+        .vn-passport__controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .vn-passport__btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid var(--azul);
+            color: var(--azul-deep);
+            background: var(--branco);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .vn-passport__btn:hover {
+            background: var(--azul);
+            color: var(--branco);
+        }
+
+        .vn-passport__btn:disabled {
+            opacity: .35;
+            cursor: not-allowed;
+        }
+
+        .vn-passport__dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .vn-passport__dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--cinza-bg);
+            cursor: pointer;
+            transition: all var(--transition);
+            border: none;
+        }
+
+        .vn-passport__dot.vn-active {
+            background: var(--laranja);
+            width: 24px;
+            border-radius: 999px;
+        }
+
+        /* Bônus */
+        .vn-bonus {
+            background: linear-gradient(135deg, #0D3348 0%, var(--verde-deep) 100%);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: var(--branco);
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 56px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 680px) {
+            .vn-bonus {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        .vn-bonus::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 110% 50%, rgba(77, 201, 160, .25) 0%, transparent 60%);
+        }
+
+        .vn-bonus__icon {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: var(--verde);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-bonus__content {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .vn-bonus__seal {
+            display: inline-block;
+            background: var(--verde);
+            color: var(--branco);
+            font-size: .72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding: 4px 12px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+
+        .vn-bonus__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .vn-bonus__desc {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.6;
+        }
+
+        /* Para quem é / não é */
+        .vn-paraquem {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 640px) {
+            .vn-paraquem {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-paraquem__card {
+            border-radius: var(--radius-md);
+            padding: 32px;
+        }
+
+        .vn-paraquem__card--sim {
+            background: var(--verde-light);
+            border: 1px solid rgba(77, 201, 160, .3);
+        }
+
+        .vn-paraquem__card--nao {
+            background: #FFF4F0;
+            border: 1px solid rgba(200, 80, 40, .15);
+        }
+
+        .vn-paraquem__card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vn-paraquem__card--sim .vn-paraquem__card-title {
+            color: var(--verde-deep);
+        }
+
+        .vn-paraquem__card--nao .vn-paraquem__card-title {
+            color: #C85028;
+        }
+
+        .vn-paraquem__items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .vn-paraquem__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .88rem;
+            line-height: 1.5;
+        }
+
+        .vn-paraquem__card--sim .vn-paraquem__item {
+            color: var(--verde-deep);
+        }
+
+        .vn-paraquem__card--nao .vn-paraquem__item {
+            color: #A04020;
+        }
+
+        .vn-prod__cta-wrap {
+            text-align: center;
+        }
+
+        /* =============================================
+       SEÇÃO 6 — OFERTA
+    ============================================= */
+        #vn-oferta {
+            background: var(--cinza-bg);
+            padding: 88px 0;
+        }
+
+        .vn-oferta__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 860px) {
+            .vn-oferta__inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* O que inclui */
+        .vn-inclui {
+            background: var(--branco);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--sombra-md);
+        }
+
+        .vn-inclui__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--cinza-escuro);
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--cinza-bg);
+        }
+
+        .vn-inclui__items {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .vn-inclui__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: .9rem;
+            line-height: 1.5;
+            color: var(--cinza-medio);
+        }
+
+        .vn-inclui__item-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--verde-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .75rem;
+            margin-top: 1px;
+        }
+
+        .vn-inclui__item strong {
+            color: var(--cinza-escuro);
+        }
+
+        /* Box preço */
+        .vn-preco-box {
+            background: linear-gradient(160deg, #0A2030 0%, #0D3348 100%);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--sombra-lg);
+        }
+
+        .vn-preco-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--laranja), var(--laranja-deep));
+        }
+
+        .vn-preco-box::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(245, 124, 43, .12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .vn-preco-box__label {
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .5);
+            margin-bottom: 16px;
+        }
+
+        .vn-preco-box__title {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 28px;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-preco-box__preco {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 28px;
+        }
+
+        .vn-preco-box__parcelas {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .6);
+            margin-bottom: 6px;
+        }
+
+        .vn-preco-box__valor {
+            display: flex;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        .vn-preco-box__moeda {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .6);
+            padding-top: 10px;
+        }
+
+        .vn-preco-box__num {
+            font-family: 'Fraunces', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--branco);
+            line-height: 1;
+        }
+
+        .vn-preco-box__avista {
+            font-size: .85rem;
+            color: rgba(255, 255, 255, .5);
+            margin-top: 6px;
+        }
+
+        .vn-preco-box__avista em {
+            color: var(--verde);
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* Price emphasis animation */
+        @keyframes vn-pulse-price {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        .vn-price--pulse {
+            animation: vn-pulse-price .8s ease 2;
+        }
+
+        /* Garantia */
+        .vn-garantia {
+            background: rgba(77, 201, 160, .1);
+            border: 1px solid rgba(77, 201, 160, .2);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-garantia__icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .vn-garantia__text {
+            font-size: .88rem;
+            color: rgba(255, 255, 255, .8);
+            line-height: 1.6;
+        }
+
+        .vn-garantia__text strong {
+            color: var(--verde);
+        }
+
+        /* Compra segura */
+        .vn-compra-segura {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-segura-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .vn-preco-box__cta {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 14px;
+            font-size: 1.05rem;
+            padding: 18px 32px;
+            justify-content: center;
+        }
+
+        .vn-preco-box__urgencia {
+            text-align: center;
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .4);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* =============================================
+       SEÇÃO 7 — FAQ + CTA FINAL + RODAPÉ
+    ============================================= */
+        #vn-faq {
+            background: var(--branco);
+            padding: 88px 0;
+        }
+
+        .vn-faq__header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .vn-faq__header .vn-h2 {
+            margin: 14px 0 0;
+        }
+
+        .vn-faq__list {
+            max-width: 760px;
+            margin: 0 auto 64px;
+        }
+
+        .vn-faq__item {
+            border-bottom: 1px solid var(--cinza-bg);
+            overflow: hidden;
+        }
+
+        .vn-faq__q {
+            width: 100%;
+            text-align: left;
+            padding: 22px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            font-size: .97rem;
+            font-weight: 600;
+            color: var(--cinza-escuro);
+            background: none;
+            border: none;
+            transition: color var(--transition);
+        }
+
+        .vn-faq__q:hover {
+            color: var(--azul-deep);
+        }
+
+        .vn-faq__icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--cinza-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
+            transition: all var(--transition);
+        }
+
+        .vn-faq__item[open] .vn-faq__icon,
+        .vn-faq__q[aria-expanded="true"]+.vn-faq__a .vn-faq__icon,
+        .vn-faq__q[aria-expanded="true"]~* .vn-faq__icon {
+            background: var(--azul-light);
+            color: var(--azul-deep);
+        }
+
+        .vn-faq__q[aria-expanded="true"] .vn-faq__icon {
+            background: var(--azul-light);
+            color: var(--azul-deep);
+            transform: rotate(45deg);
+        }
+
+        .vn-faq__a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease, padding .4s ease;
+        }
+
+        .vn-faq__a-inner {
+            padding: 0 0 22px;
+            font-size: .9rem;
+            color: var(--cinza-medio);
+            line-height: 1.75;
+        }
+
+        .vn-faq__a-inner strong {
+            color: var(--cinza-escuro);
+        }
+
+        /* CTA Final */
+        .vn-cta-final {
+            background: linear-gradient(135deg, #0A2030 0%, #0D3348 60%, #1A5978 100%);
+            border-radius: var(--radius-xl);
+            padding: 72px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 680px) {
+            .vn-cta-final {
+                padding: 48px 28px;
+            }
+        }
+
+        .vn-cta-final::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 60% at 20% 50%, rgba(245, 124, 43, .12) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 50% at 80% 50%, rgba(77, 201, 160, .12) 0%, transparent 60%);
+        }
+
+        .vn-cta-final__content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-cta-final__subtitle {
+            font-size: .85rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--laranja);
+            margin-bottom: 16px;
+        }
+
+        .vn-cta-final__h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 900;
+            color: var(--branco);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        .vn-cta-final__p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .7);
+            max-width: 500px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+
+        .vn-cta-final__ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .vn-cta-final__garantia {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, .45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* Rodapé */
+        #vn-footer {
+            background: var(--cinza-escuro);
+            padding: 48px 0 32px;
+        }
+
+        .vn-footer__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 680px) {
+            .vn-footer__inner {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+
+        .vn-footer__brand-name {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--branco);
+            margin-bottom: 10px;
+        }
+
+        .vn-footer__brand-desc {
+            font-size: .83rem;
+            color: rgba(255, 255, 255, .45);
+            line-height: 1.7;
+        }
+
+        .vn-footer__col-title {
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, .3);
+            margin-bottom: 14px;
+        }
+
+        .vn-footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .vn-footer__link {
+            font-size: .83rem;
+            color: rgba(255, 255, 255, .5);
+            transition: color var(--transition);
+        }
+
+        .vn-footer__link:hover {
+            color: var(--azul);
+        }
+
+        .vn-footer__socials {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .vn-footer__social {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, .5);
+            transition: all var(--transition);
+        }
+
+        .vn-footer__social:hover {
+            background: var(--azul);
+            border-color: var(--azul);
+            color: var(--branco);
+            transform: translateY(-3px);
+        }
+
+        .vn-footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .vn-footer__copy {
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .25);
+        }
+
+        .vn-footer__disclaimer {
+            font-size: .72rem;
+            color: rgba(255, 255, 255, .2);
+            max-width: 600px;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        @media (max-width: 640px) {
+            .vn-footer__disclaimer {
+                text-align: left;
+            }
+        }
+
+        /* =============================================
+       DEPOIMENTOS PLACEHOLDER
+    ============================================= */
+        #vn-depoimentos {
+            background: var(--azul-sky);
+            padding: 72px 0;
+        }
+
+        .vn-dep__header {
+            text-align: center;
+            margin-bottom: 44px;
+        }
+
+        .vn-dep__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 760px) {
+            .vn-dep__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .vn-dep__card {
+            background: var(--branco);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            box-shadow: var(--sombra-md);
+            border-top: 3px solid var(--azul);
+        }
+
+        .vn-dep__placeholder {
+            font-size: .83rem;
+            color: var(--cinza-leve);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .vn-dep__author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vn-dep__avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--azul-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .vn-dep__author-name {
+            font-weight: 700;
+            font-size: .88rem;
+            color: var(--cinza-escuro);
+        }
+
+        .vn-dep__author-loc {
+            font-size: .75rem;
+            color: var(--cinza-leve);
+        }
+
+        /* =============================================
+       PLACEHOLDER DE IMAGEM GLOBAL
+    ============================================= */
+        .vn-img-placeholder {
+            background: linear-gradient(135deg, var(--azul-deep) 0%, #082030 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, .4);
+            text-align: center;
+            padding: 40px 24px;
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+        }
+
+        .vn-img-placeholder .vn-img-icon {
+            font-size: 3.5rem;
+            margin-bottom: 14px;
+        }
+
+        .vn-img-placeholder p {
+            font-size: .82rem;
+            line-height: 1.5;
+        }
+
+        /* =============================================
+       RESPONSIVIDADE ADICIONAL
+    ============================================= */
+        @media (min-width: 1280px) {
+            .vn-hero__h1 {
+                font-size: 4rem;
+            }
+
+            .vn-ticket {
+                flex: 0 0 calc(33.333% - 16px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vn-btn {
+                padding: 14px 28px;
+            }
+
+            .vn-btn--lg {
+                padding: 16px 32px;
+                font-size: 1rem;
+            }
+
+            .vn-cta-final {
+                padding: 40px 20px;
+            }
+
+            .vn-preco-box__num {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =============================================
+     STICKY CTA
+============================================= -->
+    <div id="vn-sticky" role="complementary" aria-label="Oferta fixada">
+        <div class="vn-sticky__text">
+            <div><strong>Método Viva Nômade</strong> — Garantia de 7 dias</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin-top:2px;">Do zero até a sua primeira viagem
+                internacional</div>
+        </div>
+        <a href="https://pay.kiwify.com.br/2Q5cIpx" class="vn-btn vn-btn--primary"
+            aria-label="Quero começar agora — ir para checkout" onclick="vnTrack('vn_cta_click',{label:'sticky'})"
+            style="flex-shrink:0;padding:12px 24px;font-size:.9rem;">Quero começar ✈️</a>
+    </div>
+
+    <!-- =============================================
+     SEÇÃO 1 — HERO
+============================================= -->
+    <section id="vn-hero" aria-labelledby="vn-h1">
+        <div class="vn-container">
+            <div class="vn-hero__inner">
+
+                <!-- Copy Side -->
+                <div class="vn-hero__copy">
+                    <div class="vn-hero__eyebrow vn-reveal">
+                        <div class="vn-hero__eyebrow-line"></div>
+                        <span class="vn-hero__eyebrow-text">Método Viva Nômade</span>
+                    </div>
+
+                    <h1 id="vn-h1" class="vn-hero__h1 vn-reveal vn-reveal--delay-1">
+                        Você acha que precisa de&nbsp;muito dinheiro para<br>
+                        <span class="vn-hero__strike">viver viajando?</span><br>
+                        <span class="vn-hero__accent">Mentira.</span>
+                    </h1>
+
+                    <p class="vn-hero__sub vn-reveal vn-reveal--delay-2">
+                        O que realmente trava quem sonha em viajar o mundo não é o saldo na conta — é a falta de um
+                        plano. Com <strong style="color:#fff;">planejamento inteligente + custo de vida
+                            estratégico</strong>, você vai mais longe gastando menos do que imagina.
+                    </p>
+
+                    <ul class="vn-hero__bullets vn-reveal vn-reveal--delay-2" aria-label="O que você vai conquistar">
+                        <li class="vn-hero__bullet">
+                            <span class="vn-hero__bullet-icon" aria-hidden="true">✓</span>
+                            <span><strong>Reduza seus custos</strong> de moradia, transporte e alimentação com
+                                estratégias reais — sem abrir mão de qualidade de vida</span>
+                        </li>
+                        <li class="vn-hero__bullet">
+                            <span class="vn-hero__bullet-icon" aria-hidden="true">✓</span>
+                            <span><strong>Crie ou adapte sua renda digital</strong> — design, copy, edição, IA,
+                                infoprodutos e muito mais</span>
+                        </li>
+                        <li class="vn-hero__bullet">
+                            <span class="vn-hero__bullet-icon" aria-hidden="true">✓</span>
+                            <span><strong>Passo a passo completo:</strong> do primeiro planejamento financeiro até
+                                embarcar na primeira viagem</span>
+                        </li>
+                        <li class="vn-hero__bullet">
+                            <span class="vn-hero__bullet-icon" aria-hidden="true">✓</span>
+                            <span><strong>Segurança e clareza:</strong> vistos, rotas A/B/C, documentos, chips
+                                internacionais, imprevistos resolvidos</span>
+                        </li>
+                        <li class="vn-hero__bullet">
+                            <span class="vn-hero__bullet-icon" aria-hidden="true">✓</span>
+                            <span><strong>Bônus:</strong> Profissões Digitais — como criar uma fonte de renda online do
+                                zero</span>
+                        </li>
+                    </ul>
+
+                    <div class="vn-hero__ctas vn-reveal vn-reveal--delay-3">
+                        <a href="https://pay.kiwify.com.br/2Q5cIpx" class="vn-btn vn-btn--primary vn-btn--lg"
+                            aria-label="Quero começar agora — ir para checkout"
+                            onclick="vnTrack('vn_cta_click',{label:'hero'})">Quero começar agora ✈️</a>
+                        <a href="#vn-produto" class="vn-btn vn-btn--ghost"
+                            aria-label="Ver o que vou aprender — rolar até módulos">Ver o que vou aprender</a>
+                    </div>
+
+                    <div class="vn-hero__seals vn-reveal vn-reveal--delay-4">
+                        <div class="vn-seal">
+                            <span class="vn-seal__icon" aria-hidden="true">🛡️</span>
+                            <span class="vn-seal__text">Garantia<br>7 dias</span>
+                        </div>
+                        <div class="vn-seal">
+                            <span class="vn-seal__icon" aria-hidden="true">🔒</span>
+                            <span class="vn-seal__text">Compra<br>segura</span>
+                        </div>
+                        <div class="vn-seal">
+                            <span class="vn-seal__icon" aria-hidden="true">⚡</span>
+                            <span class="vn-seal__text">Acesso<br>imediato</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Side -->
+                <div class="vn-hero__visual vn-reveal vn-reveal--delay-2">
+                    <div class="vn-hero__img-wrap">
+                        <!-- INSTRUÇÃO: substitua pelo elemento <img> com a foto real do Chris -->
+                        <!-- Exemplo: <img src="foto-chris-hero.webp" alt="Chris — criador do Método Viva Nômade" width="600" height="750" loading="eager" /> -->
+                        <div class="vn-img-placeholder">
+                            <div class="vn-hero__img-icon" aria-hidden="true">📷</div>
+                            <p><strong>Inserir foto do Chris aqui</strong><br>Sugestão: foto em destino
+                                internacional,<br>formato retrato. Formato ideal: WebP, ~600×750px</p>
+                        </div>
+                    </div>
+
+                    <!-- VSL Placeholder -->
+                    <div class="vn-hero__vsl">
+                        <button class="vn-hero__vsl-play" aria-label="Assistir apresentação do curso">▶</button>
+                        <div class="vn-hero__vsl-text">
+                            <div class="vn-hero__vsl-title">Chris explica o método em 3 minutos</div>
+                            <div class="vn-hero__vsl-sub">A espera do video</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 2 — DIAGNÓSTICO
+============================================= -->
+    <section id="vn-diagnostico" aria-labelledby="vn-diag-h2" class="vn-section">
+        <div class="vn-container">
+
+            <div class="vn-diag__header vn-reveal">
+                <span class="vn-tag vn-tag--azul">🌍 Onde você está agora?</span>
+                <h2 id="vn-diag-h2" class="vn-h2">Dois mundos.<br><em>Só você pode escolher</em> em qual quer viver.
+                </h2>
+            </div>
+
+            <!-- Mundo cinza sensorial -->
+            <div class="vn-diag__sensorial vn-reveal">
+                <p>
+                    São <strong>6h da manhã.</strong> O alarme toca. Lá fora, <strong>3 graus e chuva.</strong> Você
+                    veste a roupa de sempre, espera o ônibus lotado, pega o metrô, chega atrasado. O chefe olha feio.
+                    Você sorri. No almoço, come no mesmo lugar de sempre porque o salário não sobra. À tarde, um colega
+                    te chama de "só mais um número" — e a parte mais assustadora é que, no fundo, <strong>você sabe que
+                        ele tem razão.</strong> Não foi pra isso que você nasceu.
+                </p>
+            </div>
+
+            <!-- Cards comparativos -->
+            <div class="vn-diag__grid">
+                <div class="vn-diag__card vn-diag__card--cinza vn-reveal">
+                    <div class="vn-diag__card-header">
+                        <div class="vn-diag__card-icon" aria-hidden="true">🌧️</div>
+                        <h3 class="vn-diag__card-title">Mundo Cinza</h3>
+                    </div>
+                    <ul class="vn-diag__card-items" aria-label="Características do mundo cinza">
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Rotina que
+                            te consome — sem espaço para respirar</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Aluguel alto
+                            + financiamentos que não terminam</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Férias de 15
+                            dias por ano (se der)</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Medo de
+                            pedir demissão e "dar errado"</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Viajar é
+                            "sonho de rico" — você adia sem data</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Sensação de
+                            viver a vida dos outros, não a sua</li>
+                    </ul>
+                </div>
+
+                <div class="vn-diag__card vn-diag__card--colorido vn-reveal vn-reveal--delay-1">
+                    <div class="vn-diag__card-header">
+                        <div class="vn-diag__card-icon" aria-hidden="true">☀️</div>
+                        <h3 class="vn-diag__card-title">Mundo Colorido</h3>
+                    </div>
+                    <ul class="vn-diag__card-items" aria-label="Características do mundo colorido">
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Você escolhe
+                            o restaurante pelo prato, não pelo preço</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Custo de
+                            vida otimizado — você gasta menos do que no Brasil</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Acorda e
+                            decide onde vai dormir na semana que vem</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Renda
+                            digital — trabalha de onde estiver</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Experiências
+                            que moldam quem você é</li>
+                        <li class="vn-diag__item"><span class="vn-diag__item-dot" aria-hidden="true"></span>Autonomia
+                            real — ninguém define sua agenda</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Checklist identificação -->
+            <div class="vn-diag__check vn-reveal">
+                <p class="vn-diag__check-title">✔ Se isso parece sua vida, você é exatamente quem mais se beneficia:</p>
+                <ul class="vn-diag__check-list" aria-label="Identificação do público">
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Sente que está "preso" numa rotina que não escolheu
+                    </li>
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Quer viajar, mas acha que não tem dinheiro suficiente
+                    </li>
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Não sabe por onde começar — parece tudo muito complicado
+                    </li>
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Tem medo de partir sem segurança financeira
+                    </li>
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Já pensou em mudar de vida, mas adiou "até o momento certo"
+                    </li>
+                    <li class="vn-diag__check-item">
+                        <span class="vn-diag__check-box" aria-hidden="true">✓</span>
+                        Quer uma renda que funcione enquanto você dorme
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vn-diag__cta-wrap vn-reveal">
+                <a href="#vn-produto" class="vn-btn vn-btn--primary"
+                    aria-label="Quero sair do mundo cinza — ver o método">Quero sair do mundo cinza ✈️</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 3 — AUTORIDADE + HISTÓRIA
+============================================= -->
+    <section id="vn-autoridade" aria-labelledby="vn-aut-h2" class="vn-section">
+        <div class="vn-container">
+            <div class="vn-aut__inner">
+
+                <!-- Foto / Visual -->
+                <div class="vn-aut__visual vn-reveal">
+                    <div class="vn-aut__img-wrap">
+                        <!-- INSTRUÇÃO: substitua pelo elemento <img> com a foto real do Chris -->
+                        <!-- Exemplo: <img src="foto-chris-autoridade.webp" alt="Chris Viva Nômade em viagem" width="480" height="640" loading="lazy" /> -->
+                        <div class="vn-img-placeholder">
+                            <div class="icon" aria-hidden="true" style="font-size:3rem;margin-bottom:10px;">📷</div>
+                            <p><strong>2ª foto do Chris</strong><br>Sugestão: foto de autoridade —<br>paisagem icônica
+                                ao fundo. WebP, ~480×640px</p>
+                        </div>
+                        <div class="vn-aut__img-badge">
+                            <div class="vn-aut__img-badge-name">Chris — Viva Nômade</div>
+                            <div class="vn-aut__img-badge-role">Viajante profissional · Criador do método</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Narrativa -->
+                <div class="vn-aut__narrative-wrap vn-reveal vn-reveal--delay-1">
+                    <span class="vn-tag vn-tag--azul" style="margin-bottom:20px;display:inline-flex;">🧭 A história
+                        real</span>
+                    <h2 id="vn-aut-h2" class="vn-h2" style="margin-bottom:28px;">
+                        O dia que mudou<br><em>tudo</em> pra mim
+                    </h2>
+
+                    <div class="vn-aut__narrative">
+                        <p>Eram 2h da tarde quando fui <strong>assaltado na saída do trabalho.</strong> Liguei pro meu
+                            chefe. Ele mandou uma mensagem: <em>"Amanhã esteja aqui cedo."</em> Nenhuma pergunta se eu
+                            estava bem. Nenhuma palavra de conforto.</p>
+
+                        <p class="vn-aut__quote">"Naquele momento, eu entendi que eu não era um ser humano pra essa
+                            empresa. Era uma peça substituível. E decidi que nunca mais seria."</p>
+
+                        <p>Comecei a montar minha base digital. Aprendi a criar renda online. Identifiquei oportunidades
+                            que não dependiam de um chefe, de um endereço fixo, de um escritório frio. E quando a
+                            primeira oportunidade apareceu — eu fui embora.</p>
+
+                        <p>Hoje, depois de <strong>8 anos viajando o mundo</strong>, já passei por mais de <strong>40
+                                países</strong>, vivi em câmbio favorável, aprendi a gastar menos do que gastava no
+                            Brasil e, mais importante: <strong>vivo do meu jeito.</strong></p>
+                    </div>
+
+                    <!-- Contadores -->
+                    <div class="vn-aut__counters" style="margin-top:32px;" aria-label="Números do Chris">
+                        <div class="vn-counter">
+                            <div class="vn-counter__num" data-target="8" data-suffix="+ anos">0</div>
+                            <div class="vn-counter__label">viajando</div>
+                        </div>
+                        <div class="vn-counter">
+                            <div class="vn-counter__num" data-target="40" data-prefix="+">0</div>
+                            <div class="vn-counter__label">países visitados</div>
+                        </div>
+                        <div class="vn-counter">
+                            <div class="vn-counter__num" data-target="100" data-prefix="" data-suffix="%">0</div>
+                            <div class="vn-counter__label">do jeito dele</div>
+                        </div>
+                        <div class="vn-counter">
+                            <div class="vn-counter__num" data-target="0" data-prefix="" data-suffix=" chefes">0</div>
+                            <div class="vn-counter__label">pra responder</div>
+                        </div>
+                    </div>
+
+                    <!-- Prova social placeholder -->
+                    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 4 — MECANISMO + OBJEÇÕES
+============================================= -->
+    <section id="vn-mecanismo" aria-labelledby="vn-mec-h2">
+        <div class="vn-container">
+
+            <div class="vn-reveal">
+                <span class="vn-tag vn-tag--laranja vn-mec__tag">🔑 O que realmente te trava</span>
+                <h2 id="vn-mec-h2" class="vn-mec__h2">
+                    Você não precisa<br>de <em>R$ 100 mil.</em><br>Você precisa de um plano.
+                </h2>
+                <p class="vn-mec__lead">O dinheiro raramente é o problema. O que trava 95% das pessoas é a ausência de
+                    planejamento — e o excesso de medo de errar no primeiro passo.</p>
+            </div>
+
+            <!-- 3 erros -->
+            <div class="vn-erros">
+                <div class="vn-erro vn-reveal">
+                    <span class="vn-erro__num" aria-hidden="true">1</span>
+                    <div class="vn-erro__icon" aria-hidden="true">🏖️</div>
+                    <h3 class="vn-erro__title">Achar que nômade é sinônimo de férias</h3>
+                    <p class="vn-erro__desc">Quem entra nessa vida pensando que vai ficar deitado na praia acorda com a
+                        conta zerada em 3 meses. Disciplina e foco são inegociáveis.</p>
+                </div>
+                <div class="vn-erro vn-reveal vn-reveal--delay-1">
+                    <span class="vn-erro__num" aria-hidden="true">2</span>
+                    <div class="vn-erro__icon" aria-hidden="true">💸</div>
+                    <h3 class="vn-erro__title">Gastar com futilidades nos primeiros meses</h3>
+                    <p class="vn-erro__desc">Hostel premium, tours caros, comer fora todo dia. Sem checklists e
+                        orçamento, o dinheiro vai rápido — e a aventura vira pesadelo.</p>
+                </div>
+                <div class="vn-erro vn-reveal vn-reveal--delay-2">
+                    <span class="vn-erro__num" aria-hidden="true">3</span>
+                    <div class="vn-erro__icon" aria-hidden="true">🗺️</div>
+                    <h3 class="vn-erro__title">Partir sem rota e sem plano B (e C)</h3>
+                    <p class="vn-erro__desc">Imprevistos acontecem. Voo cancelado, golpe no aluguel, câmbio na
+                        contramão. Sem rotas A/B/C planejadas, qualquer tropeço vira crise.</p>
+                </div>
+            </div>
+
+            <!-- 3 pilares -->
+            <div class="vn-pilares vn-reveal">
+                <p class="vn-pilares__title">Os 3 pilares de quem realmente vive assim</p>
+                <div class="vn-pilares__grid">
+                    <div class="vn-pilar">
+                        <div class="vn-pilar__icon" aria-hidden="true">🧠</div>
+                        <h3 class="vn-pilar__title">Disciplina</h3>
+                        <p class="vn-pilar__desc">Manter foco no trabalho mesmo com um novo país pra explorar. Sem isso,
+                            a renda some.</p>
+                    </div>
+                    <div class="vn-pilar">
+                        <div class="vn-pilar__icon" aria-hidden="true">🎯</div>
+                        <h3 class="vn-pilar__title">Foco no objetivo</h3>
+                        <p class="vn-pilar__desc">Saber exatamente o que você quer — e tomar decisões alinhadas a isso,
+                            não ao ego do momento.</p>
+                    </div>
+                    <div class="vn-pilar">
+                        <div class="vn-pilar__icon" aria-hidden="true">📋</div>
+                        <h3 class="vn-pilar__title">Planejamento</h3>
+                        <p class="vn-pilar__desc">Roteiros, orçamentos, documentos, vistos, moradia — tudo no lugar
+                            antes de embarcar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini orçamento ilustrativo -->
+            <div class="vn-orcamento vn-reveal">
+                <div class="vn-orcamento__title">
+                    <span aria-hidden="true">📊</span>
+                    Exemplo ilustrativo de custo mensal em destinos populares
+                </div>
+                <div class="vn-orcamento__rows" role="list" aria-label="Exemplo de custos mensais">
+                    <div class="vn-orcamento__row" role="listitem">
+                        <span class="vn-orcamento__row-label">🏠 Moradia (quarto privativo)</span>
+                        <span class="vn-orcamento__row-val">R$ 800 – R$ 1.800</span>
+                    </div>
+                    <div class="vn-orcamento__row" role="listitem">
+                        <span class="vn-orcamento__row-label">🍽️ Alimentação</span>
+                        <span class="vn-orcamento__row-val">R$ 600 – R$ 1.200</span>
+                    </div>
+                    <div class="vn-orcamento__row" role="listitem">
+                        <span class="vn-orcamento__row-label">🚌 Transporte local</span>
+                        <span class="vn-orcamento__row-val">R$ 200 – R$ 400</span>
+                    </div>
+                    <div class="vn-orcamento__row" role="listitem">
+                        <span class="vn-orcamento__row-label">🌐 Internet + coworking</span>
+                        <span class="vn-orcamento__row-val">R$ 150 – R$ 350</span>
+                    </div>
+                    <div class="vn-orcamento__row" role="listitem">
+                        <span class="vn-orcamento__row-label">🎟️ Lazer + experiências</span>
+                        <span class="vn-orcamento__row-val">R$ 300 – R$ 600</span>
+                    </div>
+                </div>
+                <div class="vn-orcamento__total">
+                    <span>💡 Total estimado / mês</span>
+                    <span class="vn-orcamento__total-val">~R$ 2.050 – R$ 4.350</span>
+                </div>
+                <p class="vn-orcamento__disclaimer">* Exemplo didático. Valores variam conforme destino, estilo de vida
+                    e decisões de planejamento. O curso ensina como otimizar cada linha desse orçamento.</p>
+            </div>
+
+            <div class="vn-mec__cta vn-reveal">
+                <a href="#vn-produto" class="vn-btn vn-btn--white vn-btn--lg"
+                    aria-label="Ver os módulos do Método Viva Nômade">
+                    Ver o método completo →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 5 — O PRODUTO / TRILHAS
+============================================= -->
+    <section id="vn-produto" aria-labelledby="vn-prod-h2" class="vn-section">
+        <div class="vn-container">
+
+            <div class="vn-prod__header vn-reveal">
+                <span class="vn-tag vn-tag--azul">🗺️ O Método Completo</span>
+                <h2 id="vn-prod-h2" class="vn-h2" style="margin:14px 0 16px;">
+                    Do zero até a<br><em>primeira viagem</em> — trilha a trilha
+                </h2>
+                <p class="vn-lead">O Método Viva Nômade é o mapa que o Chris gostaria de ter tido quando começou. 10
+                    trilhas temáticas que cobrem tudo — mentalidade, renda, planejamento, logística e estilo de vida.
+                </p>
+            </div>
+
+            <!-- Carrossel Passaporte -->
+            <div class="vn-passport vn-reveal">
+                <p class="vn-passport__title" aria-hidden="true">✈ Passaporte para a liberdade — suas trilhas de
+                    embarque</p>
+
+                <div class="vn-passport__track-wrap" role="region" aria-label="Carrossel de trilhas do curso"
+                    aria-live="polite">
+                    <div class="vn-passport__track" id="vn-track">
+
+                        <!-- TRILHA 1 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 1: Comece por Aqui">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 01</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🛂</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Comece por Aqui</h3>
+                            <ul class="vn-ticket__learns" aria-label="O que você aprende nesta trilha">
+                                <li class="vn-ticket__learn">Boas-vindas e como extrair o máximo do curso</li>
+                                <li class="vn-ticket__learn">A história real do Chris — do assalto ao mundo</li>
+                                <li class="vn-ticket__learn">Como usar o método como GPS, não como regra</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você sabe exatamente para onde vai e como chegar lá</div>
+                        </div>
+
+                        <!-- TRILHA 2 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 2: Mentalidade">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 02</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🧠</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Mentalidade Nômade</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Disciplina, produtividade e rotina que funciona fora do
+                                    escritório</li>
+                                <li class="vn-ticket__learn">Como lidar com solidão, família e adaptação cultural</li>
+                                <li class="vn-ticket__learn">Coragem real, síndrome do impostor e como vencer os dois
+                                </li>
+                            </ul>
+                            <div class="vn-ticket__result">Cabeça preparada para o que vem pela frente — sem dramas
+                            </div>
+                        </div>
+
+                        <!-- TRILHA 3 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 3: Renda">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 03</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">💰</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Renda Digital</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Design, web, edição de vídeo, copy, IA e automação
+                                    aplicados a renda</li>
+                                <li class="vn-ticket__learn">Infoprodutos, técnica polaroid e rendas presenciais no
+                                    exterior</li>
+                                <li class="vn-ticket__learn">Guia de segurança financeira para não depender de uma só
+                                    fonte</li>
+                            </ul>
+                            <div class="vn-ticket__result">Renda funcionando antes de embarcar</div>
+                        </div>
+
+                        <!-- TRILHA 4 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 4: Planejamento">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 04</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">📋</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Planejamento Inteligente</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Planilha financeira completa — controle real do orçamento
+                                    nômade</li>
+                                <li class="vn-ticket__learn">Documentos essenciais, vistos e como não errar nisso</li>
+                                <li class="vn-ticket__learn">Rotas A, B e C — o que fazer quando tudo dá errado</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você chega preparado para o inesperado</div>
+                        </div>
+
+                        <!-- TRILHA 5 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 5: Moradia">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 05</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🏠</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Moradia Segura</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Como encontrar moradia segura e barata — e evitar golpes
+                                    comuns</li>
+                                <li class="vn-ticket__learn">Internet, chips internacionais, eSIM e como ficar conectado
+                                    sempre</li>
+                                <li class="vn-ticket__learn">Cafés, coworkings e como montar seu escritório em qualquer
+                                    cidade</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você dorme bem e trabalha de qualquer lugar com segurança
+                            </div>
+                        </div>
+
+                        <!-- TRILHA 6 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 6: Transporte">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 06</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">✈️</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Transporte Estratégico</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Como encontrar passagens baratas — e o que fazer no
+                                    aeroporto</li>
+                                <li class="vn-ticket__learn">Milhas aéreas: como acumular e usar do jeito certo</li>
+                                <li class="vn-ticket__learn">Transporte local em cada tipo de destino + como se
+                                    localizar</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você voa mais gastando menos — e nunca fica perdido</div>
+                        </div>
+
+                        <!-- TRILHA 7 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 7: Alimentação">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 07</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🍽️</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Alimentação Nômade</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Estratégias para comer bem gastando pouco em qualquer país
+                                </li>
+                                <li class="vn-ticket__learn">Supermercado vs restaurante — quando vale cada opção</li>
+                                <li class="vn-ticket__learn">Como adaptar sua alimentação sem abrir mão de prazer</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você come bem, gasta pouco e aprecia cada cultura pela comida
+                            </div>
+                        </div>
+
+                        <!-- TRILHA 8 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 8: Lazer">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 08</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🎒</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Lazer Nômade</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Como equilibrar trabalho e lazer sem culpa e sem caos</li>
+                                <li class="vn-ticket__learn">Turismo econômico — experiências incríveis que não pesam no
+                                    bolso</li>
+                                <li class="vn-ticket__learn">Atividades e vivências que você só tem saindo do Brasil
+                                </li>
+                            </ul>
+                            <div class="vn-ticket__result">Você vive experiências reais — não só tira foto pra feed
+                            </div>
+                        </div>
+
+                        <!-- TRILHA 9 -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha 9: Plano Prático">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha 09</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🚀</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Missão: Primeira Viagem</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Plano prático estruturado: Cidade → Estado → País →
+                                    Continente</li>
+                                <li class="vn-ticket__learn">Checklist completo para cada etapa da sua primeira saída
+                                </li>
+                                <li class="vn-ticket__learn">Como executar o plano mesmo se surgir um imprevisto de
+                                    última hora</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você sai do Brasil com data marcada e plano executável</div>
+                        </div>
+
+                        <!-- TRILHA FINAL -->
+                        <div class="vn-ticket" role="article" aria-label="Trilha Final: Viva, Nômade!">
+                            <div class="vn-ticket__header">
+                                <span class="vn-ticket__trilha-num">Trilha Final</span>
+                                <span class="vn-ticket__stamp" aria-hidden="true">🌍</span>
+                            </div>
+                            <h3 class="vn-ticket__title">Viva, Nômade!</h3>
+                            <ul class="vn-ticket__learns">
+                                <li class="vn-ticket__learn">Como não estagnar — expansão contínua de visão e destinos
+                                </li>
+                                <li class="vn-ticket__learn">Uma conversa sincera sobre o que vem depois da primeira
+                                    viagem</li>
+                                <li class="vn-ticket__learn">Construir uma vida nômade sustentável a longo prazo</li>
+                            </ul>
+                            <div class="vn-ticket__result">Você não só viaja — você vive de verdade</div>
+                        </div>
+
+                    </div><!-- /track -->
+                </div>
+
+                <!-- Controles -->
+                <div class="vn-passport__controls">
+                    <button class="vn-passport__btn" id="vn-prev" aria-label="Trilha anterior" disabled>‹</button>
+                    <div class="vn-passport__dots" id="vn-dots" role="tablist" aria-label="Navegação de trilhas"></div>
+                    <button class="vn-passport__btn" id="vn-next" aria-label="Próxima trilha">›</button>
+                </div>
+            </div><!-- /passport -->
+
+            <!-- Bônus -->
+            <div class="vn-bonus vn-reveal">
+                <div class="vn-bonus__icon" aria-hidden="true">💼</div>
+                <div class="vn-bonus__content">
+                    <span class="vn-bonus__seal">🎁 Bônus exclusivo</span>
+                    <h3 class="vn-bonus__title">Profissões Digitais</h3>
+                    <p class="vn-bonus__desc">Um guia completo para criar uma fonte de renda online do zero — mesmo que
+                        você não tenha nenhuma experiência anterior. Design, edição, copy, IA, automação e muito mais. O
+                        upgrade que transforma a sua viagem em estilo de vida.</p>
+                </div>
+            </div>
+
+            <!-- Para quem é / não é -->
+            <div class="vn-paraquem vn-reveal">
+                <div class="vn-paraquem__card vn-paraquem__card--sim">
+                    <h3 class="vn-paraquem__card-title">
+                        <span aria-hidden="true">✅</span> Para quem é
+                    </h3>
+                    <ul class="vn-paraquem__items" aria-label="Para quem é indicado">
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✓</span> Quer começar a viajar e não sabe
+                            por onde começar</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✓</span> Tem renda regular mas não sabe
+                            como adaptar para o exterior</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✓</span> Quer criar ou fortalecer uma
+                            renda digital</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✓</span> Busca liberdade geográfica com
+                            segurança</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✓</span> Está disposto a se comprometer
+                            com um plano real</li>
+                    </ul>
+                </div>
+
+                <div class="vn-paraquem__card vn-paraquem__card--nao">
+                    <h3 class="vn-paraquem__card-title">
+                        <span aria-hidden="true">🚫</span> Para quem não é
+                    </h3>
+                    <ul class="vn-paraquem__items" aria-label="Para quem não é indicado">
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✗</span> Quer uma fórmula mágica sem
+                            esforço</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✗</span> Pensa que nomadismo é só "tirar
+                            férias eternas"</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✗</span> Não está disposto a desenvolver
+                            disciplina</li>
+                        <li class="vn-paraquem__item"><span aria-hidden="true">✗</span> Quer resultados sem implementar
+                            o método</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="vn-prod__cta-wrap vn-reveal">
+                <a href="#vn-oferta" class="vn-btn vn-btn--primary vn-btn--lg"
+                    aria-label="Ver preço e garantir acesso — ir para oferta">Ver preço e garantir acesso ✈️</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+     DEPOIMENTOS (placeholder)
+============================================= -->
+    <section id="vn-depoimentos" aria-labelledby="vn-dep-h2">
+        <div class="vn-container">
+            <div class="vn-dep__header vn-reveal">
+                <span class="vn-tag vn-tag--azul">💬 O que estão dizendo</span>
+                <h2 id="vn-dep-h2" class="vn-h2" style="margin-top:14px;">
+                    Resultados reais,<br><em>histórias reais</em>
+                </h2>
+            </div>
+
+            <div class="vn-dep__grid">
+                <div class="vn-dep__card vn-reveal">
+                    <p class="vn-dep__placeholder">⭐⭐⭐⭐⭐ — Aguardando depoimento</p>
+                    <div class="vn-dep__author">
+                        <div class="vn-dep__avatar" aria-hidden="true">👤</div>
+                        <div>
+                            <div class="vn-dep__author-name">Nome do aluno</div>
+                            <div class="vn-dep__author-loc">📍 Destino / País</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vn-dep__card vn-reveal vn-reveal--delay-1">
+                        <p class="vn-dep__placeholder">⭐⭐⭐⭐⭐ — Aguardando depoimento</p>
+                    <div class="vn-dep__author">
+                        <div class="vn-dep__avatar" aria-hidden="true">👤</div>
+                        <div>
+                            <div class="vn-dep__author-name">Nome do aluno</div>
+                            <div class="vn-dep__author-loc">📍 Destino / País</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vn-dep__card vn-reveal vn-reveal--delay-2">
+                    <p class="vn-dep__placeholder">⭐⭐⭐⭐⭐ — Aguardando depoimento</p>
+                    <div class="vn-dep__author">
+                        <div class="vn-dep__avatar" aria-hidden="true">👤</div>
+                        <div>
+                            <div class="vn-dep__author-name">Nome do aluno</div>
+                            <div class="vn-dep__author-loc">📍 Destino / País</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 6 — OFERTA
+============================================= -->
+    <section id="vn-oferta" aria-labelledby="vn-oferta-h2" class="vn-section">
+        <div class="vn-container">
+
+            <div class="vn-prod__header vn-reveal" style="margin-bottom:48px;">
+                <span class="vn-tag vn-tag--laranja">🎯 Oferta especial</span>
+                <h2 id="vn-oferta-h2" class="vn-h2" style="margin:14px 0 16px;">
+                    Tudo que você precisa para<br><em>começar agora</em>
+                </h2>
+            </div>
+
+            <div class="vn-oferta__inner">
+
+                <!-- O que inclui -->
+                <div class="vn-inclui vn-reveal">
+                    <h3 class="vn-inclui__title">📦 O que está incluído</h3>
+                    <ul class="vn-inclui__items" aria-label="Conteúdo do curso">
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>10 trilhas completas</strong> do Método Viva Nômade — do zero ao
+                                embarque</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Trilha de Mentalidade</strong> — disciplina, solidão, família, síndrome do
+                                impostor</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Trilha de Renda Digital</strong> — 10+ formas de renda online aplicadas ao
+                                nomadismo</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Planilha financeira completa</strong> + rotas A/B/C + checklists</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Guia de moradia segura</strong> — evitar golpes, internet, chips e
+                                coworkings</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Trilha de Transporte</strong> — voos baratos, milhas e como se
+                                localizar</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>Missão Primeira Viagem</strong> — plano prático do início ao embarque</span>
+                        </li>
+                        <li class="vn-inclui__item">
+                            <span class="vn-inclui__item-icon" aria-hidden="true">✓</span>
+                            <span><strong>🎁 Bônus: Profissões Digitais</strong> — criar renda online do zero</span>
+                        </li>
+                    </ul>
+
+                    <!-- Placeholder depoimento na seção oferta -->
+                    <div
+                        style="background:var(--cinza-bg);border-radius:var(--radius-md);padding:20px;margin-top:20px;">
+                        <p style="font-size:.82rem;color:var(--cinza-leve);font-style:italic;line-height:1.6;">"(Inserir
+                            depoimento ou resultado de aluno autorizado aqui para reforço na decisão de compra)"</p>
+                    </div>
+                </div>
+
+                <!-- Box preço -->
+                <div class="vn-preco-box vn-reveal vn-reveal--delay-1" id="vn-preco-box">
+                    <p class="vn-preco-box__label">Acesso completo — Método Viva Nômade</p>
+                    <h3 class="vn-preco-box__title">Método Viva Nômade<br>+ Bônus Profissões Digitais</h3>
+
+                    <div class="vn-preco-box__preco" id="vn-price-anim">
+                        <p class="vn-preco-box__parcelas">ou em até 12x de</p>
+                        <div class="vn-preco-box__valor">
+                            <span class="vn-preco-box__moeda">R$</span>
+                            <span class="vn-preco-box__num">XX,XX</span>
+                        </div>
+                        <p class="vn-preco-box__avista">ou <em>R$ 297,00 à vista</em> (melhor condição)</p>
+                    </div>
+
+                    <div class="vn-garantia" role="note" aria-label="Garantia de 7 dias">
+                        <span class="vn-garantia__icon" aria-hidden="true">🛡️</span>
+                        <div class="vn-garantia__text">
+                            <strong>Garantia incondicional de 7 dias.</strong> Se por qualquer motivo você não gostar,
+                            devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo nosso.
+                        </div>
+                    </div>
+
+                    <div class="vn-compra-segura" aria-label="Selos de segurança">
+                        <span class="vn-segura-item"><span aria-hidden="true">🔒</span> Compra 100% segura</span>
+                        <span class="vn-segura-item"><span aria-hidden="true">⚡</span> Acesso imediato</span>
+                        <span class="vn-segura-item"><span aria-hidden="true">🏦</span> Pagamento protegido</span>
+                    </div>
+
+                    <a href="https://pay.kiwify.com.br/2Q5cIpx" class="vn-btn vn-btn--primary vn-preco-box__cta"
+                        aria-label="Quero garantir meu acesso agora — ir para checkout"
+                        onclick="vnTrack('vn_cta_click',{label:'offer'})">🚀 Quero garantir meu acesso agora</a>
+
+                    <p class="vn-preco-box__urgencia">Comece agora e evite continuar adiando. A vida que você quer não
+                        vai te esperar.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+     SEÇÃO 7 — FAQ
+============================================= -->
+    <section id="vn-faq" aria-labelledby="vn-faq-h2">
+        <div class="vn-container">
+
+            <div class="vn-faq__header vn-reveal">
+                <span class="vn-tag vn-tag--azul">❓ Dúvidas frequentes</span>
+                <h2 id="vn-faq-h2" class="vn-h2" style="margin-top:14px;">
+                    Respondendo o que você<br><em>já está pensando</em>
+                </h2>
+            </div>
+
+            <div class="vn-faq__list" role="list">
+
+                <div class="vn-faq__item vn-reveal" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-1" id="vn-faq-q-1">
+                        Preciso de muito dinheiro para começar?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-1" role="region" aria-labelledby="vn-faq-q-1">
+                        <div class="vn-faq__a-inner">
+                            Não. O método foi criado justamente para quem <strong>não tem uma poupança enorme</strong>.
+                            Você aprende a otimizar custos de moradia, transporte e alimentação, e a criar (ou adaptar)
+                            uma renda digital. Muitas pessoas vivem no exterior gastando menos do que gastavam no
+                            Brasil.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal vn-reveal--delay-1" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-2" id="vn-faq-q-2">
+                        Dá pra começar do zero mesmo sem experiência?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-2" role="region" aria-labelledby="vn-faq-q-2">
+                        <div class="vn-faq__a-inner">
+                            Sim. O método começa do início absoluto — mentalidade, renda, planejamento, moradia,
+                            transporte. <strong>Não precisa de experiência anterior em viagens internacionais</strong>,
+                            renda digital ou nomadismo. O curso te leva passo a passo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-3" id="vn-faq-q-3">
+                        Preciso falar inglês fluente para viajar?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-3" role="region" aria-labelledby="vn-faq-q-3">
+                        <div class="vn-faq__a-inner">
+                            Não. O inglês ajuda, mas <strong>não é pré-requisito</strong>. Existem destinos excelentes
+                            onde o espanhol básico (ou até o português) funciona bem. O método inclui estratégias de
+                            adaptação cultural e comunicação que não dependem de fluência.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal vn-reveal--delay-1" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-4" id="vn-faq-q-4">
+                        Preciso já ter uma renda online antes de entrar?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-4" role="region" aria-labelledby="vn-faq-q-4">
+                        <div class="vn-faq__a-inner">
+                            Não, mas é fortemente recomendado <strong>criar ou adaptar sua renda antes de
+                                embarcar</strong>. A Trilha 3 (Renda) e o Bônus Profissões Digitais ensinam exatamente
+                            como fazer isso — do zero.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-5" id="vn-faq-q-5">
+                        E se minha família não apoiar a decisão?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-5" role="region" aria-labelledby="vn-faq-q-5">
+                        <div class="vn-faq__a-inner">
+                            É uma das questões mais comuns — e o método aborda isso na Trilha de Mentalidade. Chris
+                            passou por isso e ensina <strong>como lidar com a pressão familiar, comunicar sua decisão
+                                com clareza</strong> e manter o equilíbrio emocional durante a transição.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal vn-reveal--delay-1" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-6" id="vn-faq-q-6">
+                        Como não me sentir sozinho viajando?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-6" role="region" aria-labelledby="vn-faq-q-6">
+                        <div class="vn-faq__a-inner">
+                            A solidão é real e o método não esconde isso. A Trilha de Mentalidade tem uma aula
+                            específica sobre <strong>como lidar com a solidão, construir conexões reais no exterior e
+                                manter laços com quem ficou</strong> — de forma saudável.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-7" id="vn-faq-q-7">
+                        E se eu quiser "voltar atrás" depois de começar?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-7" role="region" aria-labelledby="vn-faq-q-7">
+                        <div class="vn-faq__a-inner">
+                            Não há problema nenhum. O nomadismo digital <strong>não precisa ser permanente</strong>.
+                            Muitas pessoas alternam entre períodos viajando e períodos em casa. O método te dá
+                            ferramentas para os dois cenários.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal vn-reveal--delay-1" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-8" id="vn-faq-q-8">
+                        Como acesso o curso e por quanto tempo?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-8" role="region" aria-labelledby="vn-faq-q-8">
+                        <div class="vn-faq__a-inner">
+                            Após a confirmação do pagamento, você recebe acesso <strong>imediato por e-mail</strong>. O
+                            conteúdo fica disponível na plataforma — você acessa no celular, tablet ou computador, no
+                            seu ritmo e horário.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-9" id="vn-faq-q-9">
+                        O que entra no Bônus Profissões Digitais?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-9" role="region" aria-labelledby="vn-faq-q-9">
+                        <div class="vn-faq__a-inner">
+                            Um guia completo com as principais profissões digitais aplicáveis ao nomadismo —
+                            <strong>design, edição de vídeo, copywriting, desenvolvimento web, inteligência artificial,
+                                automação, infoprodutos e mais</strong>. Focado em como começar do zero e monetizar cada
+                            habilidade.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vn-faq__item vn-reveal vn-reveal--delay-1" role="listitem">
+                    <button class="vn-faq__q" aria-expanded="false" aria-controls="vn-faq-a-10" id="vn-faq-q-10">
+                        Como funciona a garantia de 7 dias?
+                        <span class="vn-faq__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="vn-faq__a" id="vn-faq-a-10" role="region" aria-labelledby="vn-faq-q-10">
+                        <div class="vn-faq__a-inner">
+                            Se dentro de 7 dias após a compra você não estiver satisfeito por <strong>qualquer
+                                motivo</strong>, basta entrar em contato e devolvemos 100% do valor pago. Sem perguntas,
+                            sem burocracia. O risco é todo nosso — não o seu.
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /faq list -->
+
+            <!-- CTA Final -->
+            <div class="vn-cta-final vn-reveal" id="vn-cta-final">
+                <div class="vn-cta-final__content">
+                    <p class="vn-cta-final__subtitle">🌍 Está pronto?</p>
+                    <h2 class="vn-cta-final__h2">
+                        Chega de mundo cinza.<br>
+                        <span style="color:var(--laranja);">Comece hoje.</span>
+                    </h2>
+                    <p class="vn-cta-final__p">
+                        Cada dia que você espera é um dia que você não está vivendo a vida que escolheu. O plano está
+                        aqui. A decisão é sua.
+                    </p>
+                    <div class="vn-cta-final__ctas">
+                        <a href="https://pay.kiwify.com.br/2Q5cIpx" class="vn-btn vn-btn--primary vn-btn--lg"
+                            aria-label="Quero minha vida nômade agora — ir para checkout"
+                            onclick="vnTrack('vn_cta_click',{label:'footer'})">✈️ Quero minha vida nômade agora</a>
+                    </div>
+                    <p class="vn-cta-final__garantia">
+                        <span aria-hidden="true">🛡️</span>
+                        Garantia incondicional de 7 dias — sem risco
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =============================================
+     RODAPÉ
+============================================= -->
+    <footer id="vn-footer" role="contentinfo">
+        <div class="vn-container">
+            <div class="vn-footer__inner">
+
+                <div>
+                    <div class="vn-footer__brand-name">Viva Nômade ✈️</div>
+                    <p class="vn-footer__brand-desc">O método que ensina brasileiros a viajarem o mundo com planejamento
+                        inteligente — sem precisar de uma fortuna.</p>
+                </div>
+
+                <div>
+                    <p class="vn-footer__col-title">Links úteis</p>
+                    <nav class="vn-footer__links" aria-label="Links do rodapé">
+                        <a href="#vn-produto" class="vn-footer__link">O Método</a>
+                        <a href="#vn-oferta" class="vn-footer__link">Oferta</a>
+                        <a href="#vn-faq" class="vn-footer__link">FAQ</a>
+                        <a href="https://pay.kiwify.com.br/2Q5cIpx" class="vn-footer__link">Checkout</a>
+                        <a href="#" class="vn-footer__link">Política de Privacidade</a>
+                        <a href="#" class="vn-footer__link">Termos de Uso</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <p class="vn-footer__col-title">Siga o Chris</p>
+                    <div class="vn-footer__socials">
+                        <a href="#" class="vn-footer__social" aria-label="Instagram do Viva Nômade">📸</a>
+                        <a href="#" class="vn-footer__social" aria-label="YouTube do Viva Nômade">▶️</a>
+                        <a href="#" class="vn-footer__social" aria-label="TikTok do Viva Nômade">🎵</a>
+                    </div>
+                    <p style="font-size:.78rem;color:rgba(255,255,255,.3);margin-top:16px;line-height:1.6;">Contato:
+                        <br><a href="mailto:contato@vivanomade.com.br"
+                            class="vn-footer__link">contato@vivanomade.com.br</a></p>
+                </div>
+
+            </div>
+
+            <div class="vn-footer__bottom">
+                <p class="vn-footer__copy">© 2025 Viva Nômade. Todos os direitos reservados.</p>
+                <p class="vn-footer__disclaimer">Este produto é comercializado em conformidade com os Termos de Serviço
+                    da Kiwify. Os resultados apresentados são pessoais e não garantem resultados iguais para todos os
+                    compradores.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =============================================
+     JSON-LD — Schema.org
+============================================= -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "Método Viva Nômade",
+      "description": "Método completo para viajar o mundo com planejamento inteligente e custo de vida estratégico. Do zero até a primeira viagem internacional.",
+      "url": "https://seudominio.com.br/metodo-viva-nomade",
+      "image": "https://seudominio.com.br/og-image.jpg",
+      "inLanguage": "pt-BR",
+      "provider": {
+        "@type": "Person",
+        "name": "Chris — Viva Nômade",
+        "url": "https://seudominio.com.br"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "297.00",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "url": "https://pay.kiwify.com.br/2Q5cIpx"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "online",
+        "courseWorkload": "P4W"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Chris — Viva Nômade",
+      "description": "Nômade digital brasileiro com 8 anos de experiência e +40 países visitados. Criador do Método Viva Nômade.",
+      "url": "https://seudominio.com.br",
+      "knowsAbout": ["nomadismo digital", "viagens baratas", "renda digital", "planejamento financeiro"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso de muito dinheiro para começar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O método foi criado para quem não tem uma poupança enorme. Você aprende a otimizar custos e a criar renda digital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá pra começar do zero mesmo sem experiência?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O método começa do início absoluto — mentalidade, renda, planejamento, moradia, transporte. Não precisa de experiência anterior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso falar inglês fluente para viajar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Existem destinos onde o espanhol básico ou o português funciona bem. O método inclui estratégias de adaptação cultural."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a garantia de 7 dias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se dentro de 7 dias você não estiver satisfeito por qualquer motivo, basta entrar em contato e devolvemos 100% do valor pago, sem perguntas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como acesso o curso e por quanto tempo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Após a confirmação do pagamento, você recebe acesso imediato por e-mail. O conteúdo fica disponível na plataforma — você acessa no celular, tablet ou computador."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    <!-- =============================================
+     JAVASCRIPT
+============================================= -->
+    <script>
+        (function () {
+            'use strict';
+
+            /* ---- DataLayer / Tracking ---- */
+            window.dataLayer = window.dataLayer || [];
+
+            function vnTrack(event, params) {
+                try {
+                    window.dataLayer.push(Object.assign({ event: event }, params || {}));
+                } catch (e) {
+                    /* fail silently */
+                }
+            }
+
+            // Expõe globalmente para onclick inline
+            window.vnTrack = vnTrack;
+
+            /* ---- View event ---- */
+            vnTrack('vn_view');
+
+            /* ---- Scroll 50% tracking ---- */
+            var scroll50Sent = false;
+            window.addEventListener('scroll', function () {
+                if (scroll50Sent) return;
+                var scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                if (scrolled >= 50) {
+                    vnTrack('vn_scroll_50');
+                    scroll50Sent = true;
+                }
+            }, { passive: true });
+
+            /* ---- Scroll Reveal (IntersectionObserver) ---- */
+            var reveals = document.querySelectorAll('.vn-reveal');
+            if ('IntersectionObserver' in window) {
+                var revealObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('vn-visible');
+                            revealObs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+                reveals.forEach(function (el) { revealObs.observe(el); });
+            } else {
+                // Fallback
+                reveals.forEach(function (el) { el.classList.add('vn-visible'); });
+            }
+
+            /* ---- Sticky CTA ---- */
+            var sticky = document.getElementById('vn-sticky');
+            var ctaFinal = document.getElementById('vn-cta-final');
+            var stickyVisible = false;
+
+            function updateSticky() {
+                var scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                var finalRect = ctaFinal ? ctaFinal.getBoundingClientRect() : null;
+                var nearFooter = finalRect && finalRect.top < window.innerHeight;
+
+                if (scrollPct > 20 && !nearFooter) {
+                    if (!stickyVisible) {
+                        sticky.classList.add('vn-sticky--visible');
+                        stickyVisible = true;
+                    }
+                } else {
+                    if (stickyVisible) {
+                        sticky.classList.remove('vn-sticky--visible');
+                        stickyVisible = false;
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', updateSticky, { passive: true });
+
+            /* ---- Animated Counters ---- */
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute('data-target'), 10);
+                var prefix = el.getAttribute('data-prefix') || '';
+                var suffix = el.getAttribute('data-suffix') || '';
+                var duration = 1600;
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var current = Math.floor(eased * target);
+                    el.textContent = prefix + current + suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                    else el.textContent = prefix + target + suffix;
+                }
+                requestAnimationFrame(step);
+            }
+
+            var counters = document.querySelectorAll('.vn-counter__num[data-target]');
+            if ('IntersectionObserver' in window) {
+                var counterObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            animateCounter(entry.target);
+                            counterObs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                counters.forEach(function (el) { counterObs.observe(el); });
+            }
+
+            /* ---- Price emphasis pulse ---- */
+            var priceBox = document.getElementById('vn-preco-box');
+            if (priceBox && 'IntersectionObserver' in window) {
+                var priceObs = new IntersectionObserver(function (entries) {
+                    if (entries[0].isIntersecting) {
+                        var priceAnim = document.getElementById('vn-price-anim');
+                        if (priceAnim) {
+                            priceAnim.classList.add('vn-price--pulse');
+                        }
+                        priceObs.disconnect();
+                    }
+                }, { threshold: 0.5 });
+                priceObs.observe(priceBox);
+            }
+
+            /* ---- Carrossel Passaporte ---- */
+            var track = document.getElementById('vn-track');
+            var prevBtn = document.getElementById('vn-prev');
+            var nextBtn = document.getElementById('vn-next');
+            var dotsContainer = document.getElementById('vn-dots');
+
+            if (track && prevBtn && nextBtn) {
+                var tickets = track.querySelectorAll('.vn-ticket');
+                var totalTickets = tickets.length;
+                var currentIdx = 0;
+                var visibleCount = 1;
+
+                function getVisible() {
+                    return window.innerWidth >= 1280 ? 3 : window.innerWidth >= 860 ? 2 : 1;
+                }
+
+                // Criar dots
+                function buildDots() {
+                    dotsContainer.innerHTML = '';
+                    visibleCount = getVisible();
+                    var pages = Math.ceil(totalTickets / visibleCount);
+                    for (var i = 0; i < pages; i++) {
+                        (function (idx) {
+                            var dot = document.createElement('button');
+                            dot.className = 'vn-passport__dot' + (idx === 0 ? ' vn-active' : '');
+                            dot.setAttribute('aria-label', 'Ir para trilha ' + (idx * visibleCount + 1));
+                            dot.setAttribute('role', 'tab');
+                            dot.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+                            dot.addEventListener('click', function () { goTo(idx * visibleCount); });
+                            dotsContainer.appendChild(dot);
+                        })(i);
+                    }
+                }
+
+                function updateCarousel() {
+                    visibleCount = getVisible();
+                    var cardWidth = track.parentElement.offsetWidth / visibleCount;
+                    track.style.transform = 'translateX(-' + (currentIdx * cardWidth) + 'px)';
+                    prevBtn.disabled = currentIdx === 0;
+                    nextBtn.disabled = currentIdx >= totalTickets - visibleCount;
+
+                    // Update dots
+                    var dots = dotsContainer.querySelectorAll('.vn-passport__dot');
+                    var activePage = Math.floor(currentIdx / visibleCount);
+                    dots.forEach(function (d, i) {
+                        d.classList.toggle('vn-active', i === activePage);
+                        d.setAttribute('aria-selected', i === activePage ? 'true' : 'false');
+                    });
+                }
+
+                function goTo(idx) {
+                    visibleCount = getVisible();
+                    currentIdx = Math.max(0, Math.min(idx, totalTickets - visibleCount));
+                    updateCarousel();
+                }
+
+                prevBtn.addEventListener('click', function () {
+                    visibleCount = getVisible();
+                    goTo(currentIdx - visibleCount);
+                });
+
+                nextBtn.addEventListener('click', function () {
+                    visibleCount = getVisible();
+                    goTo(currentIdx + visibleCount);
+                });
+
+                // Touch / swipe
+                var touchStartX = 0;
+                track.parentElement.addEventListener('touchstart', function (e) {
+                    touchStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                track.parentElement.addEventListener('touchend', function (e) {
+                    var diff = touchStartX - e.changedTouches[0].clientX;
+                    if (Math.abs(diff) > 50) {
+                        visibleCount = getVisible();
+                        if (diff > 0) goTo(currentIdx + visibleCount);
+                        else goTo(currentIdx - visibleCount);
+                    }
+                }, { passive: true });
+
+                // Keyboard nav
+                track.parentElement.addEventListener('keydown', function (e) {
+                    if (e.key === 'ArrowRight') {
+                        visibleCount = getVisible();
+                        goTo(currentIdx + visibleCount);
+                    }
+                    if (e.key === 'ArrowLeft') {
+                        visibleCount = getVisible();
+                        goTo(currentIdx - visibleCount);
+                    }
+                });
+
+                window.addEventListener('resize', function () {
+                    visibleCount = getVisible();
+                    currentIdx = Math.min(currentIdx, Math.max(0, totalTickets - visibleCount));
+                    buildDots();
+                    updateCarousel();
+                });
+
+                buildDots();
+                updateCarousel();
+            }
+
+            /* ---- FAQ Accordion ---- */
+            var faqBtns = document.querySelectorAll('.vn-faq__q');
+
+            faqBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var expanded = btn.getAttribute('aria-expanded') === 'true';
+                    var answerId = btn.getAttribute('aria-controls');
+                    var answer = document.getElementById(answerId);
+
+                    // Close all
+                    faqBtns.forEach(function (b) {
+                        b.setAttribute('aria-expanded', 'false');
+                        var aId = b.getAttribute('aria-controls');
+                        var a = document.getElementById(aId);
+                        if (a) a.style.maxHeight = '0';
+                    });
+
+                    // Open clicked (if was closed)
+                    if (!expanded) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        if (answer) {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                        }
+                    }
+                });
+
+                // Keyboard
+                btn.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
     <style>
@@ -63,7 +63,7 @@
             --radius-md: 16px;
             --radius-lg: 24px;
             --radius-xl: 36px;
-            --max-w: 1200px;
+            --max-w: 1240px;
             --transition: .3s cubic-bezier(.4, 0, .2, 1);
         }
 
@@ -81,7 +81,7 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background: var(--branco);
             color: var(--cinza-escuro);
             -webkit-font-smoothing: antialiased;
@@ -157,9 +157,9 @@
         }
 
         .vn-h2 {
-            font-family: 'Fraunces', serif;
+            font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(1.75rem, 4vw, 2.8rem);
-            font-weight: 900;
+            font-weight: 700;
             line-height: 1.15;
             color: var(--cinza-escuro);
         }
@@ -426,11 +426,24 @@
             max-width: 520px;
         }
 
+        @media (max-width: 480px) {
+            .vn-hero__sub {
+                margin-bottom: 24px;
+            }
+        }
+
         .vn-hero__bullets {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin-bottom: 36px;
+        }
+
+        @media (max-width: 480px) {
+            .vn-hero__bullets {
+                gap: 10px;
+                margin-bottom: 28px;
+            }
         }
 
         .vn-hero__bullet {
@@ -462,10 +475,28 @@
             margin-bottom: 36px;
         }
 
+        @media (max-width: 480px) {
+            .vn-hero__ctas {
+                gap: 10px;
+                margin-bottom: 28px;
+                flex-direction: column;
+            }
+
+            .vn-hero__ctas .vn-btn {
+                width: 100%;
+            }
+        }
+
         .vn-hero__seals {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .vn-hero__seals {
+                gap: 10px;
+            }
         }
 
         .vn-seal {

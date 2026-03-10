@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
     <!-- JSON-LD: Course + FAQPage + Person -->
@@ -114,8 +114,8 @@
             --vn-border-card: rgba(255, 255, 255, 0.06);
             --vn-radius: 14px;
             --vn-radius-lg: 22px;
-            --vn-ff-head: 'Syne', sans-serif;
-            --vn-ff-body: 'DM Sans', sans-serif;
+            --vn-ff-head: 'Poppins', sans-serif;
+            --vn-ff-body: 'Inter', sans-serif;
             --vn-transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -171,7 +171,7 @@
     ============================================= */
         .vn-container {
             width: 100%;
-            max-width: 1920px;
+            max-width: 1240px;
             margin-inline: auto;
             padding-inline: clamp(18px, 5vw, 60px);
         }
@@ -421,6 +421,12 @@
             letter-spacing: -0.02em;
         }
 
+        @media (max-width: 540px) {
+            .vn-logo {
+                font-size: 1.1rem;
+            }
+        }
+
         .vn-logo span {
             color: var(--vn-green);
         }
@@ -454,9 +460,14 @@
 
         .vn-hero-inner {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: clamp(40px, 6vw, 80px);
             align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .vn-hero-inner {
+                gap: clamp(32px, 5vw, 60px);
+            }
         }
 
         @media (max-width: 860px) {
@@ -466,14 +477,74 @@
             }
         }
 
+        @media (max-width: 640px) {
+            .vn-hero {
+                padding-top: clamp(40px, 5vw, 60px);
+                padding-bottom: clamp(40px, 5vw, 60px);
+            }
+
+            .vn-hero-inner {
+                gap: 32px;
+            }
+
+            .vn-hero-eyebrow {
+                font-size: 0.7rem;
+                margin-bottom: 10px;
+            }
+
+            .vn-h1 {
+                font-size: clamp(1.4rem, 5.5vw, 2rem);
+                line-height: 1.25;
+                margin-bottom: 16px;
+            }
+
+            .vn-hero-sub {
+                font-size: clamp(0.85rem, 2.8vw, 0.95rem);
+                margin-bottom: 20px;
+                line-height: 1.65;
+            }
+
+            .vn-hero-bullets {
+                gap: 8px;
+                margin-bottom: 20px;
+            }
+
+            .vn-hero-bullets li {
+                font-size: 0.85rem;
+                gap: 8px;
+            }
+
+            .vn-hero-cta-group {
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 18px;
+            }
+
+            .vn-hero-cta-group .vn-btn {
+                width: 100%;
+                padding: 14px 24px;
+                font-size: 0.95rem;
+            }
+
+            .vn-trust-seals {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .vn-seal {
+                font-size: 0.7rem;
+            }
+        }
+
         .vn-hero-eyebrow {
             font-family: var(--vn-ff-head);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: var(--vn-green);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -490,10 +561,10 @@
 
         .vn-h1 {
             font-family: var(--vn-ff-head);
-            font-size: clamp(1.0rem, 5.5vw, 2.8rem);
+            font-size: clamp(1.8rem, 4.2vw, 2.8rem);
             font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
             color: var(--vn-text);
             margin-bottom: 20px;
         }
@@ -519,10 +590,10 @@
         }
 
         .vn-hero-sub {
-            font-size: clamp(1rem, 2vw, 1.18rem);
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
             color: var(--vn-text-muted);
             line-height: 1.7;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             max-width: 540px;
         }
 
@@ -530,16 +601,17 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 11px;
-            margin-bottom: 36px;
+            gap: 10px;
+            margin-bottom: 32px;
         }
 
         .vn-hero-bullets li {
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            font-size: 0.97rem;
+            font-size: 0.95rem;
             color: var(--vn-text);
+            line-height: 1.5;
         }
 
         .vn-hero-bullets li::before {
@@ -561,28 +633,35 @@
         .vn-hero-cta-group {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 12px;
             align-items: center;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         .vn-trust-seals {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px;
+            gap: 14px;
         }
 
         .vn-seal {
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             color: var(--vn-text-muted);
             font-weight: 500;
+            line-height: 1.4;
         }
 
         .vn-seal-icon {
             font-size: 1rem;
+        }
+
+        .vn-hero-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         /* VIDEO PLACEHOLDER */
@@ -594,6 +673,21 @@
             border: 1px solid var(--vn-border-card);
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
             aspect-ratio: 16/9;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .vn-video-wrap iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 0;
+        }
+
+        @media (max-width: 860px) {
+            .vn-video-wrap {
+                aspect-ratio: 16/9;
+            }
         }
 
         .vn-video-placeholder {
@@ -1984,7 +2078,7 @@
                 <div class="vn-reveal vn-reveal-delay-2">
                     <div class="vn-video-wrap">
 
-                        <iframe width="867" height="488"
+                        <iframe width="380px" height="335px"
                             src="https://www.youtube.com/embed/3p4CD1SpUeY?si=rqtgAjhX0VSbH330&amp;controls=0"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2130,7 +2224,7 @@
                             <div class="vn-stat-label">Países visitados</div>
                         </div>
                         <div class="vn-stat-item">
-                            <div class="vn-stat-num" data-counter="20" data-prefix="+" data-suffix="K">0</div>
+                            <div class="vn-stat-num" data-counter="30" data-prefix="+" data-suffix="K">0</div>
                             <div class="vn-stat-label">YouTube comunidade</div>
                         </div>
                     </div>

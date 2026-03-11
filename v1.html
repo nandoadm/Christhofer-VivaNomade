@@ -529,7 +529,7 @@
             .vn-trust-seals {
                 flex-direction: row;
                 align-items: flex-start;
-                margin: 10px auto;
+                margin: 20px auto;
             }
 
             .vn-seal {
@@ -641,7 +641,7 @@
         .vn-trust-seals {
             display: flex;
             gap:16px;
-            margin: 10px auto;
+            margin: 30px auto;
             font-size: 1.2rem;
         }
 
@@ -911,47 +911,434 @@
             position: relative;
         }
 
-        .vn-story-block {
+        /* ───────────────────────────────────────
+           LAYOUT WRAPPER - História + Galeria
+        ───────────────────────────────────────── */
+        .vn-auth-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
-            margin-bottom: 64px;
+            margin-bottom: 100px;
         }
 
-        @media (max-width: 860px) {
-            .vn-story-block {
+        @media (max-width: 1024px) {
+            .vn-auth-wrapper {
                 grid-template-columns: 1fr;
-                gap: 36px;
+                gap: 60px;
+                margin-bottom: 80px;
             }
         }
 
-        .vn-story-text p {
+        /* ───────────────────────────────────────
+           HISTÓRIA - TEXTO NARRATIVO
+        ───────────────────────────────────────── */
+        .vn-auth-story {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .vn-auth-story p {
             color: var(--vn-text-muted);
-            line-height: 1.8;
-            margin-bottom: 18px;
-            font-size: 0.98rem;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin: 0;
         }
 
-        .vn-story-text p strong {
+        .vn-auth-story p strong {
             color: var(--vn-text);
+            font-weight: 700;
         }
 
-        .vn-story-text .vn-callout {
-            border-left: 3px solid var(--vn-green);
-            padding-left: 18px;
-            font-size: 1.05rem;
+        .vn-auth-story .vn-callout {
+            border-left: 4px solid var(--vn-green);
+            padding-left: 20px;
+            font-size: 1.08rem;
             font-style: italic;
             color: var(--vn-text);
-            margin: 24px 0;
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+
+        /* ───────────────────────────────────────
+           STATS - NÚMEROS DO CHRIS
+        ───────────────────────────────────────── */
+        .vn-auth-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 100px 0 80px;
+        }
+
+        @media (max-width: 768px) {
+            .vn-auth-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+                margin: 80px 0 60px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .vn-auth-stats {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin: 60px 0 50px;
+            }
+        }
+
+        .vn-stat-card {
+            background: linear-gradient(135deg, rgba(46, 232, 122, 0.05) 0%, rgba(46, 232, 122, 0.01) 100%);
+            border: 1px solid rgba(46, 232, 122, 0.15);
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vn-stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .vn-stat-card:hover {
+            border-color: rgba(46, 232, 122, 0.3);
+            background: linear-gradient(135deg, rgba(46, 232, 122, 0.1) 0%, rgba(46, 232, 122, 0.03) 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(46, 232, 122, 0.15);
+        }
+
+        .vn-stat-card:hover::before {
+            left: 100%;
+        }
+
+        .vn-stat-number {
+            font-family: var(--vn-ff-head);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--vn-green);
+            line-height: 1;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .vn-stat-text {
+            font-size: 0.9rem;
+            color: var(--vn-text-muted);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* ───────────────────────────────────────
+           BENEFÍCIOS - O QUE MUDA NA PRÁTICA
+        ───────────────────────────────────────── */
+        .vn-auth-benefits {
+            margin-top: 80px;
+            padding-top: 80px;
+            border-top: 1px solid var(--vn-border-card);
+        }
+
+        .vn-auth-benefits-title {
+            font-family: var(--vn-ff-head);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--vn-text);
+            text-align: center;
+            margin-bottom: 48px;
+            letter-spacing: -0.3px;
+        }
+
+        .vn-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .vn-benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .vn-benefit-card {
+            background: var(--vn-bg-card);
+            border: 1.5px solid var(--vn-border-card);
+            border-radius: 12px;
+            padding: 32px 28px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vn-benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--vn-green), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .vn-benefit-card:hover {
+            border-color: var(--vn-green);
+            background: linear-gradient(135deg, rgba(46, 232, 122, 0.05) 0%, var(--vn-bg-card) 100%);
+            box-shadow: 0 16px 48px rgba(46, 232, 122, 0.12);
+            transform: translateY(-6px);
+        }
+
+        .vn-benefit-card:hover::before {
+            opacity: 1;
+        }
+
+        .vn-benefit-icon {
+            font-size: 2.4rem;
+            margin-bottom: 14px;
+            display: block;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .vn-benefit-card:hover .vn-benefit-icon {
+            transform: scale(1.15) rotateZ(-5deg);
+        }
+
+        .vn-benefit-name {
+            font-family: var(--vn-ff-head);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--vn-text);
+            margin-bottom: 10px;
+            margin: 0 0 10px 0;
+        }
+
+        .vn-benefit-desc {
+            font-size: 0.95rem;
+            color: var(--vn-text-muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .vn-story-block {
+            display: none;
         }
 
         .vn-avatar-block {
-            background: var(--vn-bg-card);
-            border: 1px solid var(--vn-border-card);
-            border-radius: var(--vn-radius-lg);
-            padding: 36px 28px;
+            display: none;
+        }
+
+        .vn-avatar-content {
+            display: none;
+        }
+
+        .vn-stats-grid {
+            display: none;
+        }
+
+        /* =============================================
+       GALERIA CRIATIVA - COLAGEM POLAROID
+    ============================================= */
+        .vn-journey-gallery {
+            position: relative;
+            height: 420px;
+            margin: 100px auto 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+        }
+
+        .vn-polaroid {
+            position: absolute;
+            width: 240px;
+            height: 280px;
+            background: #ffffff;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15),
+                        0 0 0 1px rgba(0, 0, 0, 0.05);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+            transform-origin: center;
+            perspective: 1200px;
+        }
+
+        .vn-polaroid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .vn-polaroid:nth-child(1) {
+            top: 10px;
+            left: 3%;
+            transform: rotate(-14deg) scale(0.88) translateZ(0);
+            z-index: 1;
+        }
+
+        .vn-polaroid:nth-child(2) {
+            top: 50px;
+            left: 20%;
+            transform: rotate(6deg) scale(0.94) translateZ(0);
+            z-index: 2;
+        }
+
+        .vn-polaroid:nth-child(3) {
+            top: 70px;
+            right: 20%;
+            transform: rotate(-8deg) scale(0.93) translateZ(0);
+            z-index: 2;
+        }
+
+        .vn-polaroid:nth-child(4) {
+            top: 15px;
+            right: 3%;
+            transform: rotate(11deg) scale(0.89) translateZ(0);
+            z-index: 1;
+        }
+
+        .vn-polaroid:hover {
+            transform: rotate(0deg) scale(1.15) translateZ(50px) translateY(-10px) !important;
+            box-shadow: 0 30px 80px rgba(46, 232, 122, 0.25),
+                        0 40px 100px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            filter: drop-shadow(0 15px 30px rgba(46, 232, 122, 0.15));
+        }
+
+        .vn-polaroid-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vn-polaroid-label {
+            padding: 16px 14px;
+            background: #ffffff;
             text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 1024px) {
+            .vn-journey-gallery {
+                height: 360px;
+                margin: 80px auto 60px;
+            }
+
+            .vn-polaroid {
+                width: 200px;
+                height: 240px;
+            }
+
+            .vn-polaroid-img {
+                height: 160px;
+            }
+
+            .vn-polaroid:nth-child(1) {
+                left: 2%;
+            }
+
+            .vn-polaroid:nth-child(2) {
+                left: 16%;
+            }
+
+            .vn-polaroid:nth-child(3) {
+                right: 16%;
+            }
+
+            .vn-polaroid:nth-child(4) {
+                right: 2%;
+            }
+
+            .vn-polaroid:hover {
+                transform: rotate(0deg) scale(1.1) translateZ(30px) translateY(-8px) !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .vn-journey-gallery {
+                height: 300px;
+                margin: 60px auto 40px;
+                max-width: 100%;
+                padding: 0 16px;
+            }
+
+            .vn-polaroid {
+                width: 160px;
+                height: 210px;
+            }
+
+            .vn-polaroid-img {
+                height: 130px;
+            }
+
+            .vn-polaroid-label {
+                padding: 12px 10px;
+                font-size: 0.8rem;
+                min-height: 80px;
+            }
+
+            .vn-polaroid:nth-child(1) {
+                left: -5%;
+                top: 20px;
+            }
+
+            .vn-polaroid:nth-child(2) {
+                left: 10%;
+                top: 40px;
+            }
+
+            .vn-polaroid:nth-child(3) {
+                right: 10%;
+                top: 40px;
+            }
+
+            .vn-polaroid:nth-child(4) {
+                right: -5%;
+                top: 20px;
+            }
+
+            .vn-polaroid:hover {
+                transform: rotate(0deg) scale(1.05) translateZ(20px) translateY(-5px) !important;
+                box-shadow: 0 20px 50px rgba(46, 232, 122, 0.2),
+                            0 25px 60px rgba(0, 0, 0, 0.15) !important;
+            }
+        }
+
+        /* Avatar simples */
+        .vn-avatar-content {
+            position: relative;
+            z-index: 2;
         }
 
         .vn-avatar {
@@ -1576,6 +1963,233 @@
         }
 
         /* =============================================
+       CARROSSEL CRIATIVO 3D COM PERSPECTIVA
+    ============================================= */
+        .vn-gallery {
+            margin: 60px 0 0;
+            position: relative;
+        }
+
+        .vn-gallery__question {
+            text-align: center;
+            font-family: var(--vn-ff-head);
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--vn-text);
+            line-height: 1.3;
+        }
+
+        .vn-gallery__wrapper {
+            perspective: 1200px;
+            position: relative;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .vn-gallery__container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 850px;
+        }
+
+        .vn-gallery__track {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            width: 100%;
+        }
+
+        .vn-gallery__slide {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8) rotateY(45deg) translateZ(-150px);
+            transition: all 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            filter: brightness(0.6);
+        }
+
+        .vn-gallery__slide.vn-active {
+            opacity: 1;
+            transform: scale(1) rotateY(0deg) translateZ(0);
+            pointer-events: auto;
+            z-index: 10;
+            filter: brightness(1);
+        }
+
+        .vn-gallery__slide.vn-prev {
+            opacity: 0.3;
+            transform: scale(0.75) rotateY(-45deg) translateZ(-150px);
+            z-index: 5;
+        }
+
+        .vn-gallery__img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+        }
+
+        .vn-gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1);
+            transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .vn-gallery__slide.vn-active .vn-gallery__img {
+            transform: scale(1.08);
+        }
+
+        .vn-gallery__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(10, 15, 13, 0.5) 100%);
+            pointer-events: none;
+            border-radius: 16px;
+        }
+
+        .vn-gallery__badge {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 15, 13, 0.98) 0%, transparent 100%);
+            padding: 50px 28px 28px;
+            text-align: center;
+            border-radius: 16px;
+            z-index: 5;
+        }
+
+        .vn-gallery__label {
+            font-family: var(--vn-ff-head);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--vn-green);
+            margin-bottom: 8px;
+            opacity: 0;
+            transform: translateY(15px);
+            animation: vn-gallery-label-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s forwards;
+        }
+
+        .vn-gallery__title {
+            font-family: var(--vn-ff-head);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--vn-text);
+            line-height: 1.3;
+            opacity: 0;
+            transform: translateY(15px);
+            animation: vn-gallery-label-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+        }
+
+        @keyframes vn-gallery-label-in {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .vn-gallery__nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .vn-gallery__btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: 2px solid var(--vn-green);
+            background: transparent;
+            color: var(--vn-green);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .vn-gallery__btn:hover:not(:disabled) {
+            background: var(--vn-green);
+            color: var(--vn-bg);
+            transform: scale(1.15) rotate(-5deg);
+            box-shadow: 0 10px 30px rgba(46, 232, 122, 0.3);
+        }
+
+        .vn-gallery__btn:disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+
+        .vn-gallery__dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .vn-gallery__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(46, 232, 122, 0.15);
+            border: 1px solid rgba(46, 232, 122, 0.3);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding: 0;
+        }
+
+        .vn-gallery__dot:hover:not(.vn-active) {
+            background: rgba(46, 232, 122, 0.3);
+        }
+
+        .vn-gallery__dot.vn-active {
+            background: var(--vn-green);
+            width: 28px;
+            border-radius: 999px;
+        }
+
+        @media (max-width: 768px) {
+            .vn-gallery__wrapper {
+                height: 300px;
+            }
+
+            .vn-gallery__title {
+                font-size: 1.1rem;
+            }
+
+            .vn-gallery__btn {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
+
+            .vn-gallery__nav {
+                gap: 16px;
+            }
+        }
+
+        /* =============================================
        SEÇÃO 6: OFERTA
     ============================================= */
         .vn-offer {
@@ -2039,9 +2653,8 @@
                     <p class="vn-hero-eyebrow">Método Viva Nômade</p>
 
                     <h1 class="vn-h1 vn-reveal" id="vn-h1">
-                        Você acha que precisa de <span class="vn-h1-strike">muito dinheiro</span><br>
-                        pra viajar o mundo?<br>
-                        <span class="vn-h1-accent">Isso é mentira.</span>
+                        Descubra como viajar o mundo<br>
+                        gastando <span class="vn-h1-accent">menos que um hambúrguer por dia</span>
                     </h1>
 
                     <p class="vn-hero-sub vn-reveal vn-reveal-delay-1">
@@ -2175,107 +2788,99 @@
 ============================================================ -->
     <section class="vn-authority vn-section" id="sobre" aria-labelledby="vn-auth-title">
         <div class="vn-container">
-
             <div class="vn-tag vn-reveal">👤 Quem é o Chris?</div>
 
-            <div class="vn-story-block">
-                <div class="vn-story-text">
-                    <h2 class="vn-section-title vn-reveal" id="vn-auth-title">
-                        De ser assaltado a caminho<br>do trabalho para <em>+40 países</em>
-                    </h2>
-                    <div class="vn-divider vn-reveal"></div>
+            <h2 class="vn-section-title vn-reveal" id="vn-auth-title">
+                De ser assaltado a caminho<br>do trabalho para <em>+40 países</em>
+            </h2>
+            <div class="vn-divider vn-reveal"></div>
 
-                    <div class="vn-reveal vn-reveal-delay-1">
-                        <p>
-                            Tinha uma rotina previsível. Acordar cedo, trânsito, trabalho,
-                            voltar tarde. Um dia, <strong>foi assaltado no caminho para o escritório.</strong>
-                            No dia seguinte, o chefe disse: "você precisa estar aqui,
-                            não importa o que aconteceu."
-                        </p>
-                        <p>
-                            Foi aí que bateu a ficha: <em class="vn-callout">
-                                "Estou trocando o melhor do meu tempo por uma sensação de ser apenas um número."
-                            </em>
-                        </p>
-                        <p>
-                            Decidiu que <strong>chega.</strong> Começou a estudar nomadismo digital,
-                            planejamento financeiro inteligente e formas de criar renda online.
-                            Não saiu do Brasil com as malas cheias de dinheiro —
-                            saiu com um método.
-                        </p>
-                        <p>
-                            Hoje, <strong>8 anos depois</strong>, Chris já percorreu mais de
-                            <strong>+40 países</strong>, construiu uma comunidade no YouTube e Instagram,
-                            e prova todo dia que viver bem viajando o mundo não é privilégio de quem
-                            nasceu rico — é questão de planejamento.
-                        </p>
-                    </div>
+            <div class="vn-auth-wrapper">
+                <!-- HISTÓRIA -->
+                <div class="vn-auth-story vn-reveal vn-reveal-delay-1">
+                    <p>
+                        Tinha uma rotina previsível. Acordar cedo, trânsito, trabalho,
+                        voltar tarde. Um dia, <strong>foi assaltado no caminho para o escritório.</strong>
+                        No dia seguinte, o chefe disse: "você precisa estar aqui,
+                        não importa o que aconteceu."
+                    </p>
+                    <p>
+                        Foi aí que bateu a ficha: <em class="vn-callout">
+                            "Estou trocando o melhor do meu tempo por uma sensação de ser apenas um número."
+                        </em>
+                    </p>
+                    <p>
+                        Decidiu que <strong>chega.</strong> Começou a estudar nomadismo digital,
+                        planejamento financeiro inteligente e formas de criar renda online.
+                        Não saiu do Brasil com as malas cheias de dinheiro —
+                        saiu com um <strong>método</strong>.
+                    </p>
+                    <p>
+                        Hoje, <strong>8 anos depois</strong>, Chris já percorreu mais de
+                        <strong>+40 países</strong>, construiu uma comunidade no YouTube e Instagram,
+                        e prova todo dia que viver bem viajando o mundo não é privilégio de quem
+                        nasceu rico — é questão de <strong>planejamento</strong>.
+                    </p>
                 </div>
 
-                <div class="vn-avatar-block vn-reveal vn-reveal-delay-2">
-                    <div class="vn-avatar" aria-hidden="true">✈️</div>
-                    <p class="vn-avatar-name">Chris</p>
-                    <p class="vn-avatar-role">Nômade Digital · Criador de Conteúdo · @vivanomade</p>
-
-                    <div class="vn-stats-grid" aria-label="Números do Chris">
-                        <div class="vn-stat-item">
-                            <div class="vn-stat-num" data-counter="8" data-suffix=" anos">0</div>
-                            <div class="vn-stat-label">Viajando o mundo</div>
-                        </div>
-                        <div class="vn-stat-item">
-                            <div class="vn-stat-num" data-counter="40" data-prefix="+">0</div>
-                            <div class="vn-stat-label">Países visitados</div>
-                        </div>
-                        <div class="vn-stat-item">
-                            <div class="vn-stat-num" data-counter="30" data-prefix="+" data-suffix="K">0</div>
-                            <div class="vn-stat-label">YouTube comunidade</div>
-                        </div>
+                <!-- GALERIA POLAROID CRIATIVA -->
+                <div class="vn-journey-gallery vn-reveal vn-reveal-delay-1">
+                    <div class="vn-polaroid">
+                        <img src="assets/img/A0DC7CEE-29D7-4866-B148-6172E924ED78.webp" alt="Chris explorando o mundo" class="vn-polaroid-img">
+                        <div class="vn-polaroid-label">Explorando 🌍</div>
                     </div>
-                    <!-- Bloco depoimentos placeholder -->
-
-                    <div class="vn-reveal">
-                        <h3
-                            style="font-family:var(--vn-ff-head);font-size:1.1rem;font-weight:700;margin-bottom:24px;color:var(--vn-text-muted);text-align:center;">
-                            O que muda na prática
-                        </h3>
-                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-                            <div
-                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                                <div style="font-size:1.8rem;margin-bottom:8px;">🕐</div>
-                                <div
-                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                                    Tempo</div>
-                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Você decide quando e onde
-                                    trabalhar.
-                                    Sem relógio de ponto.</div>
-                            </div>
-                            <div
-                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                                <div style="font-size:1.8rem;margin-bottom:8px;">💰</div>
-                                <div
-                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                                    Dinheiro</div>
-                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Países com custo de vida
-                                    menor = você
-                                    vive melhor com o mesmo salário.</div>
-                            </div>
-                            <div
-                                style="background:var(--vn-bg-card);border:1px solid var(--vn-border-card);border-radius:var(--vn-radius);padding:22px 18px;text-align:center;">
-                                <div style="font-size:1.8rem;margin-bottom:8px;">🌐</div>
-                                <div
-                                    style="font-family:var(--vn-ff-head);font-weight:700;color:var(--vn-text);margin-bottom:4px;">
-                                    Liberdade</div>
-                                <div style="font-size:0.85rem;color:var(--vn-text-muted);">Nenhum chefe pode te dizer
-                                    onde você
-                                    precisa estar.</div>
-                            </div>
-                        </div>
+                    <div class="vn-polaroid">
+                        <img src="assets/img/CHINAS.webp" alt="Chris viajando" class="vn-polaroid-img">
+                        <div class="vn-polaroid-label">Vivendo 🚀</div>
+                    </div>
+                    <div class="vn-polaroid">
+                        <img src="assets/img/Acho%20foda.webp" alt="Chris em aventura" class="vn-polaroid-img">
+                        <div class="vn-polaroid-label">Criando 📸</div>
+                    </div>
+                    <div class="vn-polaroid">
+                        <img src="assets/img/IMG_2021.webp" alt="Chris nômade digital" class="vn-polaroid-img">
+                        <div class="vn-polaroid-label">Trabalhando 💻</div>
                     </div>
                 </div>
             </div>
 
+            <!-- STATS DO CHRIS -->
+            <div class="vn-auth-stats vn-reveal vn-reveal-delay-2">
+                <div class="vn-stat-card">
+                    <div class="vn-stat-number" data-counter="8">0</div>
+                    <div class="vn-stat-text">anos viajando</div>
+                </div>
+                <div class="vn-stat-card">
+                    <div class="vn-stat-number" data-prefix="+" data-counter="40">+0</div>
+                    <div class="vn-stat-text">países visitados</div>
+                </div>
+                <div class="vn-stat-card">
+                    <div class="vn-stat-number" data-prefix="+" data-counter="30" data-suffix="K">+0K</div>
+                    <div class="vn-stat-text">comunidade YouTube</div>
+                </div>
+            </div>
 
-
+            <!-- O QUE MUDA NA PRÁTICA -->
+            <div class="vn-auth-benefits vn-reveal vn-reveal-delay-3">
+                <h3 class="vn-auth-benefits-title">O que muda na prática</h3>
+                <div class="vn-benefits-grid">
+                    <div class="vn-benefit-card">
+                        <div class="vn-benefit-icon">🕐</div>
+                        <h4 class="vn-benefit-name">Tempo</h4>
+                        <p class="vn-benefit-desc">Você decide quando e onde trabalhar. Sem relógio de ponto.</p>
+                    </div>
+                    <div class="vn-benefit-card">
+                        <div class="vn-benefit-icon">💰</div>
+                        <h4 class="vn-benefit-name">Dinheiro</h4>
+                        <p class="vn-benefit-desc">Países com custo de vida menor = você vive melhor com o mesmo salário.</p>
+                    </div>
+                    <div class="vn-benefit-card">
+                        <div class="vn-benefit-icon">🌐</div>
+                        <h4 class="vn-benefit-name">Liberdade</h4>
+                        <p class="vn-benefit-desc">Nenhum chefe pode te dizer onde você precisa estar.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -3525,6 +4130,127 @@
             };
 
             VNCarousel.init();
+
+            /* ─── GALERIA COM PERSPECTIVA 3D ─── */
+            const VNGallery = {
+                state: {
+                    currentIdx: 0,
+                    totalSlides: 0
+                },
+
+                elements: {
+                    track: document.getElementById('vn-gallery-track'),
+                    slides: [],
+                    dotsContainer: document.getElementById('vn-gallery-dots'),
+                    prevBtn: document.getElementById('vn-gallery-prev'),
+                    nextBtn: document.getElementById('vn-gallery-next')
+                },
+
+                init() {
+                    if (!this.isValid()) return;
+
+                    this.elements.slides = this.elements.track.querySelectorAll('.vn-gallery__slide');
+                    this.state.totalSlides = this.elements.slides.length;
+
+                    this.buildDots();
+                    this.bindEvents();
+                },
+
+                isValid() {
+                    return this.elements.track && this.elements.dotsContainer && this.elements.prevBtn && this.elements.nextBtn;
+                },
+
+                buildDots() {
+                    this.elements.dotsContainer.innerHTML = '';
+                    for (let i = 0; i < this.state.totalSlides; i++) {
+                        const dot = document.createElement('button');
+                        dot.className = `vn-gallery__dot${i === 0 ? ' vn-active' : ''}`;
+                        dot.setAttribute('aria-label', `Imagem ${i + 1}`);
+                        dot.addEventListener('click', () => this.goTo(i));
+                        this.elements.dotsContainer.appendChild(dot);
+                    }
+                },
+
+                goTo(idx) {
+                    this.state.currentIdx = Math.max(0, Math.min(idx, this.state.totalSlides - 1));
+                    this.update();
+                },
+
+                next() {
+                    this.goTo((this.state.currentIdx + 1) % this.state.totalSlides);
+                },
+
+                prev() {
+                    this.goTo((this.state.currentIdx - 1 + this.state.totalSlides) % this.state.totalSlides);
+                },
+
+                update() {
+                    // Atualizar classes dos slides
+                    this.elements.slides.forEach((slide, i) => {
+                        slide.classList.remove('vn-active', 'vn-prev');
+                        
+                        if (i === this.state.currentIdx) {
+                            slide.classList.add('vn-active');
+                        } else if (i === (this.state.currentIdx - 1 + this.state.totalSlides) % this.state.totalSlides) {
+                            slide.classList.add('vn-prev');
+                        }
+                    });
+
+                    // Atualizar dots
+                    const dots = this.elements.dotsContainer.querySelectorAll('.vn-gallery__dot');
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('vn-active', i === this.state.currentIdx);
+                    });
+
+                    // Atualizar estado dos botões
+                    this.elements.prevBtn.disabled = false;
+                    this.elements.nextBtn.disabled = false;
+                },
+
+                bindEvents() {
+                    this.elements.prevBtn.addEventListener('click', () => this.prev());
+                    this.elements.nextBtn.addEventListener('click', () => this.next());
+
+                    // Teclado
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'ArrowLeft') this.prev();
+                        if (e.key === 'ArrowRight') this.next();
+                    });
+                }
+            };
+
+            VNGallery.init();
+
+            /* ─── EFEITO TILT 3D NAS POLAROIDS ─── */
+            const polaroids = document.querySelectorAll('.vn-polaroid');
+            const rotations = [-14, 6, -8, 11];
+            const scales = [0.88, 0.94, 0.93, 0.89];
+            
+            polaroids.forEach((polaroid, index) => {
+                const originalRotation = rotations[index];
+                const originalScale = scales[index];
+                
+                polaroid.addEventListener('mousemove', (e) => {
+                    const rect = polaroid.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    
+                    const angleX = (e.clientY - centerY) * 0.08;
+                    const angleY = (centerX - e.clientX) * 0.08;
+                    
+                    polaroid.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.12) translateZ(50px) translateY(-10px)`;
+                });
+                
+                polaroid.addEventListener('mouseleave', () => {
+                    const transition = polaroid.style.transition;
+                    polaroid.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    polaroid.style.transform = `rotate(${originalRotation}deg) scale(${originalScale}) translateZ(0)`;
+                    
+                    setTimeout(() => {
+                        polaroid.style.transition = transition;
+                    }, 600);
+                });
+            });
 
         })();
     </script>

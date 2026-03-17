@@ -455,14 +455,7 @@
             gap: 8px;
         }
 
-        .vn-hero-eyebrow::before {
-            content: '';
-            display: inline-block;
-            width: 28px;
-            height: 2px;
-            background: var(--vn-green);
-            border-radius: 1px;
-        }
+
 
         .vn-h1 {
             font-family: var(--vn-ff-head);

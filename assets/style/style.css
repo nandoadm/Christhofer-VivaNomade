@@ -2323,30 +2323,34 @@ a:hover {
 
 .vn-price-block {
   margin-bottom: 28px;
+  padding: 24px 0;
 }
 
 .vn-price-installment {
   font-family: var(--vn-ff-head);
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--vn-text-muted);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
 }
 
 .vn-price-main {
   font-family: var(--vn-ff-head);
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: var(--vn-green);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  opacity: 0.9;
 }
 
 .vn-price-main .vn-price-small {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   vertical-align: top;
-  margin-top: 8px;
+  margin-top: 4px;
   display: inline-block;
+  margin-right: 4px;
 }
 
 .vn-price-or {
@@ -2356,13 +2360,24 @@ a:hover {
 }
 
 .vn-price-installments {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--vn-text-muted);
+  margin-bottom: 12px;
 }
 
 .vn-price-installments strong {
+  display: block;
+  font-size: 3.0rem;
   color: var(--vn-text);
   font-family: var(--vn-ff-head);
+  font-weight: 800;
+  margin-top: 8px;
+  letter-spacing: -0.02em;
+}
+
+.vn-price-12x {
+  color: var(--vn-green);
+  text-shadow: 0 0 20px rgba(46, 232, 122, 0.25);
 }
 
 /* Pulse animation para preço */
